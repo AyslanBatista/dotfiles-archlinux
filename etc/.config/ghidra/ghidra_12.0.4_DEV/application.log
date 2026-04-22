@@ -1,0 +1,884 @@
+2026-04-17 13:27:42 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 13:27:42 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 13:27:42 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 13:27:47 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 13:27:48 INFO  (ClassSearcher) Class search complete (891 ms)  
+2026-04-17 13:27:48 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 13:27:48 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 13:27:48 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 13:27:48 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 13:27:48 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 13:27:48 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 13:27:48 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 13:27:48 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 13:27:48 DEBUG (DefaultProjectManager) No tools found; Installing default tools  
+2026-04-17 13:27:48 DEBUG (DefaultProjectManager) 	no recent project directories found  
+2026-04-17 13:27:48 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 13:27:48 INFO  (GhidraRun) Ghidra startup complete (7050 ms)  
+2026-04-17 13:56:27 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 13:56:27 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 13:56:27 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 13:56:28 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 13:56:29 INFO  (ClassSearcher) Class search complete (907 ms)  
+2026-04-17 13:56:29 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 13:56:29 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 13:56:29 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 13:56:29 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 13:56:29 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 13:56:29 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 13:56:29 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 13:56:29 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 13:56:30 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 13:56:30 INFO  (GhidraRun) Ghidra startup complete (3103 ms)  
+2026-04-17 14:08:38 INFO  (DefaultProject) Creating project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 14:09:00 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 14:09:00 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 14:09:00 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 14:09:01 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 14:09:01 INFO  (ClassSearcher) Class search complete (860 ms)  
+2026-04-17 14:09:02 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 14:09:02 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 14:09:02 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 14:09:02 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 14:09:02 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 14:09:02 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 14:09:02 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 14:09:02 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 14:09:02 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 14:09:02 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 14:09:03 INFO  (GhidraRun) Ghidra startup complete (3305 ms)  
+2026-04-17 14:09:14 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 14:09:14 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 14:09:14 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 14:09:14 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 14:09:15 INFO  (ClassSearcher) Class search complete (893 ms)  
+2026-04-17 14:09:15 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 14:09:15 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 14:09:15 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 14:09:15 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 14:09:15 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 14:09:15 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 14:09:15 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 14:09:15 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 14:09:16 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 14:09:16 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 14:09:17 INFO  (GhidraRun) Ghidra startup complete (3306 ms)  
+2026-04-17 14:10:16 INFO  (ThemeUtils) Saving theme to /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/themes/Dark.theme  
+2026-04-17 14:10:20 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 14:10:20 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 14:10:20 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 14:10:21 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 14:10:21 INFO  (ClassSearcher) Class search complete (882 ms)  
+2026-04-17 14:10:22 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 14:10:22 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 14:10:22 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 14:10:22 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 14:10:22 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 14:10:22 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 14:10:22 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 14:10:22 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 14:10:22 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 14:10:22 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 14:10:23 INFO  (GhidraRun) Ghidra startup complete (3315 ms)  
+2026-04-17 15:12:34 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 15:12:34 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 15:12:34 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 15:12:35 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 15:12:36 INFO  (ClassSearcher) Class search complete (837 ms)  
+2026-04-17 15:12:36 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 15:12:36 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 15:12:36 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 15:12:36 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 15:12:36 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 15:12:36 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 15:12:36 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 15:12:36 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 15:12:37 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 15:12:37 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 15:12:38 INFO  (GhidraRun) Ghidra startup complete (4513 ms)  
+2026-04-17 15:13:25 ERROR (ExtensionUtils) Exception trying to read an extension from /home/ayslan/Downloads/GhidraMCP-release-1-4.zip java.io.IOException: No extension.properties file found in zip
+	at ghidra.util.extensions.ExtensionUtils.tryToGetExtension(ExtensionUtils.java:367)
+	at ghidra.util.extensions.ExtensionUtils.getExtension(ExtensionUtils.java:189)
+	at ghidra.framework.project.extensions.ExtensionInstaller.install(ExtensionInstaller.java:73)
+	at ghidra.framework.project.extensions.ExtensionTableProvider.installExtensions(ExtensionTableProvider.java:192)
+	at ghidra.framework.project.extensions.ExtensionTableProvider$1.actionPerformed(ExtensionTableProvider.java:163)
+	at docking.menu.DialogToolbarButton.lambda$doActionPerformed$0(DialogToolbarButton.java:67)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:187)
+	at java.desktop/java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:229)
+	at java.desktop/java.awt.Dialog.show(Dialog.java:1044)
+	at java.desktop/java.awt.Component.show(Component.java:1688)
+	at java.desktop/java.awt.Component.setVisible(Component.java:1635)
+	at java.desktop/java.awt.Window.setVisible(Window.java:982)
+	at java.desktop/java.awt.Dialog.setVisible(Dialog.java:982)
+	at docking.DockingDialog.setVisible(DockingDialog.java:363)
+	at docking.DockingWindowManager.lambda$doShowDialog$7(DockingWindowManager.java:1873)
+	at ghidra.util.Swing.doRun(Swing.java:292)
+	at ghidra.util.Swing.runNow(Swing.java:208)
+	at ghidra.util.Swing.runNow(Swing.java:163)
+	at docking.DockingWindowManager.doShowDialog(DockingWindowManager.java:1877)
+	at docking.DockingWindowManager.showDialog(DockingWindowManager.java:1825)
+	at docking.AbstractDockingTool.showDialog(AbstractDockingTool.java:168)
+	at ghidra.framework.plugintool.PluginTool.showExtensions(PluginTool.java:342)
+	at ghidra.framework.main.FrontEndTool$2.actionPerformed(FrontEndTool.java:658)
+	at docking.DockingActionProxy.actionPerformed(DockingActionProxy.java:47)
+	at docking.DockingActionPerformer.lambda$perform$0(DockingActionPerformer.java:73)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+ 
+2026-04-17 15:13:25 ERROR (ExtensionInstaller) Error Installing Extension: /home/ayslan/Downloads/GhidraMCP-release-1-4.zip does not point to a valid ghidra extension  
+2026-04-17 15:14:06 ERROR (ExtensionUtils) Exception trying to read an extension from /home/ayslan/Downloads/GhidraMCP-release-1-4.zip java.io.IOException: No extension.properties file found in zip
+	at ghidra.util.extensions.ExtensionUtils.tryToGetExtension(ExtensionUtils.java:367)
+	at ghidra.util.extensions.ExtensionUtils.getExtension(ExtensionUtils.java:189)
+	at ghidra.framework.project.extensions.ExtensionInstaller.install(ExtensionInstaller.java:73)
+	at ghidra.framework.project.extensions.ExtensionTableProvider.installExtensions(ExtensionTableProvider.java:192)
+	at ghidra.framework.project.extensions.ExtensionTableProvider$1.actionPerformed(ExtensionTableProvider.java:163)
+	at docking.menu.DialogToolbarButton.lambda$doActionPerformed$0(DialogToolbarButton.java:67)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:187)
+	at java.desktop/java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:229)
+	at java.desktop/java.awt.Dialog.show(Dialog.java:1044)
+	at java.desktop/java.awt.Component.show(Component.java:1688)
+	at java.desktop/java.awt.Component.setVisible(Component.java:1635)
+	at java.desktop/java.awt.Window.setVisible(Window.java:982)
+	at java.desktop/java.awt.Dialog.setVisible(Dialog.java:982)
+	at docking.DockingDialog.setVisible(DockingDialog.java:363)
+	at docking.DockingWindowManager.lambda$doShowDialog$7(DockingWindowManager.java:1873)
+	at ghidra.util.Swing.doRun(Swing.java:292)
+	at ghidra.util.Swing.runNow(Swing.java:208)
+	at ghidra.util.Swing.runNow(Swing.java:163)
+	at docking.DockingWindowManager.doShowDialog(DockingWindowManager.java:1877)
+	at docking.DockingWindowManager.showDialog(DockingWindowManager.java:1825)
+	at docking.AbstractDockingTool.showDialog(AbstractDockingTool.java:168)
+	at ghidra.framework.plugintool.PluginTool.showExtensions(PluginTool.java:342)
+	at ghidra.framework.main.FrontEndTool$2.actionPerformed(FrontEndTool.java:658)
+	at docking.DockingActionProxy.actionPerformed(DockingActionProxy.java:47)
+	at docking.DockingActionPerformer.lambda$perform$0(DockingActionPerformer.java:73)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+ 
+2026-04-17 15:14:06 ERROR (ExtensionInstaller) Error Installing Extension: /home/ayslan/Downloads/GhidraMCP-release-1-4.zip does not point to a valid ghidra extension  
+2026-04-17 15:16:14 ERROR (ExtensionInstaller) Error Installing Extension: /home/ayslan/Downloads/GhidraMCP-release-1-4 does not point to a valid ghidra extension  
+2026-04-17 15:16:29 INFO  (ExtensionTableProvider) Extensions Changed!: Please restart Ghidra for extension changes to take effect.  
+2026-04-17 15:16:55 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 15:16:55 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 15:16:55 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 15:16:55 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 15:16:56 INFO  (ClassSearcher) Class search complete (882 ms)  
+2026-04-17 15:16:56 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 15:16:56 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 15:16:56 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 15:16:56 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 15:16:56 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 15:16:56 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 15:16:56 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 15:16:56 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 15:16:57 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 15:16:57 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 15:16:57 INFO  (GhidraRun) Ghidra startup complete (2381 ms)  
+2026-04-17 15:24:12 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 15:24:12 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 15:24:12 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 15:24:12 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 15:24:13 INFO  (ClassSearcher) Class search complete (894 ms)  
+2026-04-17 15:24:13 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 15:24:13 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 15:24:13 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 15:24:13 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 15:24:13 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 15:24:13 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 15:24:13 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 15:24:13 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 15:24:14 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 15:24:14 INFO  (GhidraRun) Invalid Project: The specified file is not a project file: ls  
+2026-04-17 15:24:16 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 15:24:16 INFO  (GhidraRun) Project is Locked: Project is locked. You have another instance of Ghidra 
+already running with this project open (locally or remotely). 
+ 
+Project: /home/ayslan/Projects/Ghidra//Test 
+ 
+Lock information:
+       Username:             ayslan
+       Hostname:             archlinux
+       Timestamp:           4/17/26, 3:16 PM
+       OS Name:               Linux
+       OS Architecture:   amd64
+       OS Version:            6.19.11-arch1-1  
+2026-04-17 15:24:17 INFO  (GhidraRun) Ghidra startup complete (5700 ms)  
+2026-04-17 15:24:51 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 15:24:52 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 15:24:52 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 15:24:52 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 15:24:53 INFO  (ClassSearcher) Class search complete (856 ms)  
+2026-04-17 15:24:53 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 15:24:53 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 15:24:53 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 15:24:53 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 15:24:53 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 15:24:53 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 15:24:53 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 15:24:53 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 15:24:53 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 15:24:53 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 15:24:54 INFO  (GhidraRun) Ghidra startup complete (2333 ms)  
+2026-04-17 15:25:30 INFO  (FileCacheMaintenanceDaemon) Starting cache cleanup: /var/tmp/ayslan-ghidra/fscache2  
+2026-04-17 15:25:30 INFO  (FileCacheMaintenanceDaemon) Finished cache cleanup, estimated storage used: 0  
+2026-04-17 15:25:30 DEBUG (ElfHeader) Elf symbol table section .dynsym linked to string table section .dynstr  
+2026-04-17 15:25:30 DEBUG (ElfHeader) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2026-04-17 15:25:30 DEBUG (ElfHeader) Elf relocation table section .relr.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2026-04-17 15:25:33 DEBUG (ElfHeader) Elf symbol table section .dynsym linked to string table section .dynstr  
+2026-04-17 15:25:33 DEBUG (ElfHeader) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2026-04-17 15:25:33 DEBUG (ElfHeader) Elf relocation table section .relr.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2026-04-17 15:25:33 DEBUG (ElfProgramBuilder) Discarding 4-byte alignment/filler segment_4.3 at 00122edc  
+2026-04-17 15:25:33 DEBUG (ElfProgramBuilder) Discarding 37-byte alignment/filler segment_3.2 at 0010301b  
+2026-04-17 15:25:33 DEBUG (ElfProgramBuilder) Discarding 1-byte alignment/filler segment_3.4 at 0011c343  
+2026-04-17 15:25:33 DEBUG (ElfProgramBuilder) Discarding 4-byte alignment/filler segment_2.6 at 0010047c  
+2026-04-17 15:25:33 DEBUG (ElfProgramBuilder) Discarding 2-byte alignment/filler segment_2.10 at 0010181e  
+2026-04-17 15:25:33 INFO  (LocalFileSystem) /ls: file created (ayslan)  
+2026-04-17 15:25:33 INFO  (ImporterUtilities) Additional info:
+Loading file:///home/ayslan/Downloads/ls?MD5=9d3f6776e70b0e2194cc9d57571bddf4...
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128260 (Symbol = __progname) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128268 (Symbol = stdout) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128270 (Symbol = optind) - Runtime copy not supported (4-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128280 (Symbol = optarg) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128288 (Symbol = __progname_full) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 001282a0 (Symbol = stderr) - Runtime copy not supported (8-bytes)
+Setting block .init_array to read-only
+Setting block .fini_array to read-only
+Setting block .data.rel.ro to read-only
+Setting block .dynamic to read-only
+------------------------------------------------
+
+Linking the External Programs of 'ls' to imported libraries...
+  [libcap.so.2] -> not found in project
+  [libc.so.6] -> not found in project
+------------------------------------------------
+
+Resolving External Symbols of [/ls] - 113 unresolved symbols, no external libraries configured - skipping
+  
+2026-04-17 15:25:42 INFO  (LocalFileSystem) /ls: file deleted (ayslan)  
+2026-04-17 15:25:42 INFO  (GhidraFileData) Deleted local file ls  
+2026-04-17 15:25:45 DEBUG (ElfHeader) Elf symbol table section .dynsym linked to string table section .dynstr  
+2026-04-17 15:25:45 DEBUG (ElfHeader) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2026-04-17 15:25:45 DEBUG (ElfHeader) Elf relocation table section .relr.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2026-04-17 15:25:52 DEBUG (ElfHeader) Elf symbol table section .dynsym linked to string table section .dynstr  
+2026-04-17 15:25:52 DEBUG (ElfHeader) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2026-04-17 15:25:52 DEBUG (ElfHeader) Elf relocation table section .relr.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2026-04-17 15:25:53 DEBUG (ElfProgramBuilder) Discarding 4-byte alignment/filler segment_4.3 at 00122edc  
+2026-04-17 15:25:53 DEBUG (ElfProgramBuilder) Discarding 37-byte alignment/filler segment_3.2 at 0010301b  
+2026-04-17 15:25:53 DEBUG (ElfProgramBuilder) Discarding 1-byte alignment/filler segment_3.4 at 0011c343  
+2026-04-17 15:25:53 DEBUG (ElfProgramBuilder) Discarding 4-byte alignment/filler segment_2.6 at 0010047c  
+2026-04-17 15:25:53 DEBUG (ElfProgramBuilder) Discarding 2-byte alignment/filler segment_2.10 at 0010181e  
+2026-04-17 15:25:53 INFO  (LocalFileSystem) /ls: file created (ayslan)  
+2026-04-17 15:25:53 INFO  (ImporterUtilities) Additional info:
+Loading file:///home/ayslan/Downloads/ls?MD5=9d3f6776e70b0e2194cc9d57571bddf4...
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128260 (Symbol = __progname) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128268 (Symbol = stdout) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128270 (Symbol = optind) - Runtime copy not supported (4-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128280 (Symbol = optarg) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 00128288 (Symbol = __progname_full) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_X86_64_COPY (5, 0x5) at 001282a0 (Symbol = stderr) - Runtime copy not supported (8-bytes)
+Setting block .init_array to read-only
+Setting block .fini_array to read-only
+Setting block .data.rel.ro to read-only
+Setting block .dynamic to read-only
+------------------------------------------------
+
+Linking the External Programs of 'ls' to imported libraries...
+  [libcap.so.2] -> not found in project
+  [libc.so.6] -> not found in project
+------------------------------------------------
+
+Resolving External Symbols of [/ls] - 113 unresolved symbols, no external libraries configured - skipping
+  
+2026-04-17 15:26:07 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loading...  
+2026-04-17 15:26:07 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loaded!  
+2026-04-17 15:26:07 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server started on port 8080  
+2026-04-17 15:28:06 INFO  (GhidraMCPPlugin) Stopping GhidraMCP HTTP server...  
+2026-04-17 15:28:06 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server stopped.  
+2026-04-17 15:28:11 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loading...  
+2026-04-17 15:28:11 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loaded!  
+2026-04-17 15:28:11 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server started on port 8080  
+2026-04-17 15:28:23 DEBUG (ToolTaskManager) Background processing started...  
+2026-04-17 15:28:23 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2026-04-17 15:28:23 INFO  (ExternalDebugFileSectionProvider) DWARF external debug information found: ExternalDebugInfo [filename=ls.debug, crc=5c09445c, hash=3a35f05c70bb56219914bdafad4bd4ddfd9fe4b1]  
+2026-04-17 15:28:23 INFO  (DWARFAnalyzer) Unable to find DWARF information, skipping DWARF analysis  
+2026-04-17 15:28:25 WARN  (DecompileCallback) Decompiling 0011ab00, pcode error at 0012a350: Unable to disassemble EXTERNAL block location: 0012a350  
+2026-04-17 15:28:25 WARN  (DecompileCallback) Decompiling 0011c270, pcode error at 0012a2c0: Unable to disassemble EXTERNAL block location: 0012a2c0  
+2026-04-17 15:28:31 INFO  (PackedDatabaseCache) Packed database cache: /var/tmp/ayslan-ghidra/packed-db-cache  
+2026-04-17 15:28:31 DEBUG (PackedDatabaseCache) Caching packed database: /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2026-04-17 15:28:31 DEBUG (PackedDatabase) Unpacking database /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt -> /var/tmp/ayslan-ghidra/packed-db-cache/pdbE9B5B034/db.1.gbf  
+2026-04-17 15:28:31 DEBUG (PackedDatabaseCache) Cache update completed: /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2026-04-17 15:28:31 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-17 15:28:31 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-17 15:28:31 INFO  (ExternalSymbolResolverAnalyzer) Resolving External Symbols of [/ls] - 116 unresolved symbols, no external libraries configured - skipping  
+2026-04-17 15:28:32 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.171 secs
+    Apply Data Archives                        0.159 secs
+    Call Convention ID                         0.004 secs
+    Call-Fixup Installer                       0.016 secs
+    Create Address Tables                      0.023 secs
+    Create Address Tables - One Time           0.016 secs
+    Create Function                            0.001 secs
+    DWARF                                      0.004 secs
+    Data Reference                             0.029 secs
+    Decompiler Switch Analysis                 5.466 secs
+    Demangler GNU                              0.056 secs
+    Disassemble Entry Points                   0.526 secs
+    ELF Scalar Operand References              0.123 secs
+    Embedded Media                             0.006 secs
+    External Entry References                  0.000 secs
+    External Symbol Resolver                   0.001 secs
+    Function ID                                0.200 secs
+    Function Start Pre Search                  0.007 secs
+    Function Start Search                      0.052 secs
+    Function Start Search After Code           0.018 secs
+    Function Start Search After Data           0.004 secs
+    GCC Exception Handlers                     0.186 secs
+    Non-Returning Functions - Discovered       0.252 secs
+    Non-Returning Functions - Known            0.002 secs
+    Reference                                  0.051 secs
+    Shared Return Calls                        0.041 secs
+    Stack                                      0.655 secs
+    Subroutine References                      0.016 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.780 secs
+-----------------------------------------------------
+     Total Time   8 secs
+-----------------------------------------------------
+  
+2026-04-17 15:28:32 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2026-04-17 15:28:32 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2026-04-17 15:28:32 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (8.974 secs)  
+2026-04-17 15:28:32 DEBUG (ToolTaskManager) Background processing complete (8.976 secs)  
+2026-04-17 15:29:53 INFO  (RecoveryMgr) Fri Apr 17 15:29:53 GMT-03:00 2026 Recovery snapshot created: /home/ayslan/Projects/Ghidra/Test.rep/idata/00/~00000001.db/snapshotA.grf  
+2026-04-17 15:34:38 INFO  (LocalFileSystem) /udf_7f01196a1983678965930: file created (ayslan)  
+2026-04-17 15:34:38 INFO  (GhidraMCPPlugin) Stopping GhidraMCP HTTP server...  
+2026-04-17 15:34:38 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server stopped.  
+2026-04-17 15:47:56 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 15:47:56 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 15:47:56 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 15:47:56 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 15:47:57 INFO  (ClassSearcher) Class search complete (851 ms)  
+2026-04-17 15:47:57 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 15:47:57 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 15:47:57 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 15:47:57 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 15:47:57 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 15:47:57 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 15:47:57 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 15:47:57 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 15:47:57 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 15:47:57 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 15:47:58 INFO  (GhidraRun) Ghidra startup complete (2318 ms)  
+2026-04-17 15:53:00 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loading...  
+2026-04-17 15:53:00 ERROR (GhidraMCPPlugin) Failed to start HTTP server java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:525)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:333)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:296)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl.<init>(ServerImpl.java:145)
+	at jdk.httpserver/sun.net.httpserver.HttpServerImpl.<init>(HttpServerImpl.java:45)
+	at jdk.httpserver/sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(DefaultHttpServerProvider.java:35)
+	at jdk.httpserver/com.sun.net.httpserver.HttpServer.create(HttpServer.java:152)
+	at com.lauriewired.GhidraMCPPlugin.startServer(GhidraMCPPlugin.java:107)
+	at com.lauriewired.GhidraMCPPlugin.<init>(GhidraMCPPlugin.java:87)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at ghidra.framework.plugintool.util.PluginUtils.instantiatePlugin(PluginUtils.java:46)
+	at ghidra.framework.plugintool.PluginManager.addPlugins(PluginManager.java:147)
+	at ghidra.framework.plugintool.PluginManager.restorePluginsFromXml(PluginManager.java:321)
+	at ghidra.framework.plugintool.PluginTool.restoreFromXml(PluginTool.java:629)
+	at ghidra.framework.project.tool.GhidraTool.restoreFromXml(GhidraTool.java:137)
+	at ghidra.framework.plugintool.PluginTool.<init>(PluginTool.java:141)
+	at ghidra.framework.project.tool.GhidraTool.<init>(GhidraTool.java:67)
+	at ghidra.framework.project.tool.GhidraToolTemplate.createTool(GhidraToolTemplate.java:200)
+	at ghidra.framework.project.tool.ToolManagerImpl.getTool(ToolManagerImpl.java:651)
+	at ghidra.framework.project.tool.WorkspaceImpl.lambda$runTool$0(WorkspaceImpl.java:93)
+	at ghidra.util.Swing.lambda$runNow$1(Swing.java:148)
+	at ghidra.util.Swing.lambda$runNow$2(Swing.java:227)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:187)
+	at java.desktop/java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:229)
+	at java.desktop/java.awt.Dialog.show(Dialog.java:1044)
+	at java.desktop/java.awt.Component.show(Component.java:1688)
+	at java.desktop/java.awt.Component.setVisible(Component.java:1635)
+	at java.desktop/java.awt.Window.setVisible(Window.java:982)
+	at java.desktop/java.awt.Dialog.setVisible(Dialog.java:982)
+	at docking.DockingDialog.setVisible(DockingDialog.java:363)
+	at docking.DockingWindowManager.lambda$doShowDialog$7(DockingWindowManager.java:1873)
+	at ghidra.util.Swing.doRun(Swing.java:292)
+	at ghidra.util.Swing.runNow(Swing.java:208)
+	at ghidra.util.Swing.runNow(Swing.java:163)
+	at docking.DockingWindowManager.doShowDialog(DockingWindowManager.java:1877)
+	at docking.DockingWindowManager.showDialog(DockingWindowManager.java:1825)
+	at ghidra.util.task.TaskDialog.lambda$doShow$7(TaskDialog.java:376)
+	at ghidra.util.Swing.runIfSwingOrRunLater(Swing.java:124)
+	at ghidra.util.task.TaskDialog.doShow(TaskDialog.java:373)
+	at ghidra.util.task.TaskDialog.doShowModal(TaskDialog.java:353)
+	at ghidra.util.task.TaskDialog.show(TaskDialog.java:327)
+	at ghidra.util.task.TaskRunner.lambda$showTaskDialog$1(TaskRunner.java:123)
+	at ghidra.util.Swing.runIfSwingOrRunLater(Swing.java:124)
+	at ghidra.util.task.TaskRunner.showTaskDialog(TaskRunner.java:120)
+	at ghidra.util.task.TaskRunner.run(TaskRunner.java:54)
+	at ghidra.util.task.TaskLauncher.<init>(TaskLauncher.java:219)
+	at ghidra.util.task.TaskLauncher.<init>(TaskLauncher.java:201)
+	at ghidra.framework.project.tool.WorkspaceImpl.launchSwing(WorkspaceImpl.java:117)
+	at ghidra.framework.project.tool.WorkspaceImpl.runTool(WorkspaceImpl.java:92)
+	at ghidra.framework.project.tool.ToolServicesImpl.defaultLaunch(ToolServicesImpl.java:209)
+	at ghidra.framework.project.tool.ToolServicesImpl.launchTool(ToolServicesImpl.java:235)
+	at ghidra.framework.main.ToolButton.openDomainFiles(ToolButton.java:540)
+	at ghidra.framework.main.ToolButton$2.end(ToolButton.java:491)
+	at ghidra.framework.main.ZoomImageRunner$1.end(ZoomImageRunner.java:54)
+	at org.jdesktop.animation.timing.Animator.end(Animator.java:755)
+	at org.jdesktop.animation.timing.Animator.stop(Animator.java:660)
+	at org.jdesktop.animation.timing.Animator.timingEvent(Animator.java:732)
+	at org.jdesktop.animation.timing.Animator.access$200(Animator.java:75)
+	at org.jdesktop.animation.timing.Animator$TimerTarget.actionPerformed(Animator.java:1041)
+	at java.desktop/javax.swing.Timer.fireActionPerformed(Timer.java:289)
+	at java.desktop/javax.swing.Timer$DoPostEvent.run(Timer.java:221)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+ 
+2026-04-17 15:53:00 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loaded!  
+2026-04-17 15:53:00 INFO  (PackedDatabaseCache) Packed database cache: /var/tmp/ayslan-ghidra/packed-db-cache  
+2026-04-17 15:53:00 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2026-04-17 15:53:07 DEBUG (ToolTaskManager) Background processing started...  
+2026-04-17 15:53:07 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2026-04-17 15:53:08 INFO  (ExternalDebugFileSectionProvider) DWARF external debug information found: ExternalDebugInfo [filename=ls.debug, crc=5c09445c, hash=3a35f05c70bb56219914bdafad4bd4ddfd9fe4b1]  
+2026-04-17 15:53:08 INFO  (DWARFAnalyzer) Unable to find DWARF information, skipping DWARF analysis  
+2026-04-17 15:53:11 WARN  (DecompileCallback) Decompiling 0011c270, pcode error at 0012a2c0: Unable to disassemble EXTERNAL block location: 0012a2c0  
+2026-04-17 15:53:11 WARN  (DecompileCallback) Decompiling 0011ab00, pcode error at 0012a350: Unable to disassemble EXTERNAL block location: 0012a350  
+2026-04-17 15:53:15 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-17 15:53:16 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-17 15:53:16 INFO  (ExternalSymbolResolverAnalyzer) Resolving External Symbols of [/ls] - 116 unresolved symbols, no external libraries configured - skipping  
+2026-04-17 15:53:17 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.192 secs
+    Apply Data Archives                        0.122 secs
+    Call Convention ID                         0.006 secs
+    Call-Fixup Installer                       0.014 secs
+    Create Address Tables                      0.021 secs
+    Create Address Tables - One Time           0.013 secs
+    Create Function                            0.001 secs
+    DWARF                                      0.004 secs
+    Data Reference                             0.034 secs
+    Decompiler Switch Analysis                 5.523 secs
+    Demangler GNU                              0.034 secs
+    Disassemble Entry Points                   0.629 secs
+    ELF Scalar Operand References              0.138 secs
+    Embedded Media                             0.009 secs
+    External Entry References                  0.000 secs
+    External Symbol Resolver                   0.002 secs
+    Function ID                                0.123 secs
+    Function Start Pre Search                  0.009 secs
+    Function Start Search                      0.069 secs
+    Function Start Search After Code           0.015 secs
+    Function Start Search After Data           0.004 secs
+    GCC Exception Handlers                     0.229 secs
+    Non-Returning Functions - Discovered       0.259 secs
+    Non-Returning Functions - Known            0.011 secs
+    Reference                                  0.048 secs
+    Shared Return Calls                        0.067 secs
+    Stack                                      0.575 secs
+    Subroutine References                      0.025 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.811 secs
+-----------------------------------------------------
+     Total Time   8 secs
+-----------------------------------------------------
+  
+2026-04-17 15:53:17 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2026-04-17 15:53:17 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2026-04-17 15:53:17 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (9.344 secs)  
+2026-04-17 15:53:17 DEBUG (ToolTaskManager) Background processing complete (9.346 secs)  
+2026-04-17 15:57:57 INFO  (RecoveryMgr) Fri Apr 17 15:57:57 GMT-03:00 2026 Recovery snapshot created: /home/ayslan/Projects/Ghidra/Test.rep/idata/00/~00000001.db/snapshotA.grf  
+2026-04-17 16:03:02 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-17 16:03:02 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-17 16:03:02 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-17 16:03:03 INFO  (ClassSearcher) Searching for classes...  
+2026-04-17 16:03:03 INFO  (ClassSearcher) Class search complete (896 ms)  
+2026-04-17 16:03:03 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-17 16:03:03 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-17 16:03:03 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-17 16:03:03 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-17 16:03:03 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-17 16:03:03 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-17 16:03:03 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-17 16:03:03 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-17 16:03:04 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-17 16:03:04 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-17 16:03:04 INFO  (GhidraRun) Ghidra startup complete (2375 ms)  
+2026-04-17 16:03:10 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loading...  
+2026-04-17 16:03:10 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loaded!  
+2026-04-17 16:03:10 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server started on port 8081  
+2026-04-17 16:03:10 INFO  (PackedDatabaseCache) Packed database cache: /var/tmp/ayslan-ghidra/packed-db-cache  
+2026-04-17 16:03:10 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2026-04-17 16:03:15 DEBUG (ToolTaskManager) Background processing started...  
+2026-04-17 16:03:15 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2026-04-17 16:03:16 INFO  (ExternalDebugFileSectionProvider) DWARF external debug information found: ExternalDebugInfo [filename=ls.debug, crc=5c09445c, hash=3a35f05c70bb56219914bdafad4bd4ddfd9fe4b1]  
+2026-04-17 16:03:16 INFO  (DWARFAnalyzer) Unable to find DWARF information, skipping DWARF analysis  
+2026-04-17 16:03:17 WARN  (DecompileCallback) Decompiling 0011c270, pcode error at 0012a2c0: Unable to disassemble EXTERNAL block location: 0012a2c0  
+2026-04-17 16:03:18 WARN  (DecompileCallback) Decompiling 0011ab00, pcode error at 0012a350: Unable to disassemble EXTERNAL block location: 0012a350  
+2026-04-17 16:03:23 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-17 16:03:23 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-17 16:03:23 INFO  (ExternalSymbolResolverAnalyzer) Resolving External Symbols of [/ls] - 116 unresolved symbols, no external libraries configured - skipping  
+2026-04-17 16:03:24 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.169 secs
+    Apply Data Archives                        0.127 secs
+    Call Convention ID                         0.003 secs
+    Call-Fixup Installer                       0.014 secs
+    Create Address Tables                      0.022 secs
+    Create Address Tables - One Time           0.012 secs
+    Create Function                            0.001 secs
+    DWARF                                      0.004 secs
+    Data Reference                             0.029 secs
+    Decompiler Switch Analysis                 5.110 secs
+    Demangler GNU                              0.049 secs
+    Disassemble Entry Points                   0.614 secs
+    ELF Scalar Operand References              0.135 secs
+    Embedded Media                             0.012 secs
+    External Entry References                  0.000 secs
+    External Symbol Resolver                   0.002 secs
+    Function ID                                0.104 secs
+    Function Start Pre Search                  0.009 secs
+    Function Start Search                      0.053 secs
+    Function Start Search After Code           0.018 secs
+    Function Start Search After Data           0.005 secs
+    GCC Exception Handlers                     0.224 secs
+    Non-Returning Functions - Discovered       0.301 secs
+    Non-Returning Functions - Known            0.012 secs
+    Reference                                  0.058 secs
+    Shared Return Calls                        0.038 secs
+    Stack                                      0.576 secs
+    Subroutine References                      0.020 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.712 secs
+-----------------------------------------------------
+     Total Time   8 secs
+-----------------------------------------------------
+  
+2026-04-17 16:03:24 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2026-04-17 16:03:24 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2026-04-17 16:03:24 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (8.613 secs)  
+2026-04-17 16:03:24 DEBUG (ToolTaskManager) Background processing complete (8.614 secs)  
+2026-04-17 16:05:12 INFO  (GhidraMCPPlugin) Stopping GhidraMCP HTTP server...  
+2026-04-17 16:05:12 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server stopped.  
+2026-04-18 09:09:58 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-18 09:09:58 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-18 09:09:58 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-18 09:09:59 INFO  (ClassSearcher) Searching for classes...  
+2026-04-18 09:10:00 INFO  (ClassSearcher) Class search complete (854 ms)  
+2026-04-18 09:10:00 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-18 09:10:00 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-18 09:10:00 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-18 09:10:00 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-18 09:10:00 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-18 09:10:00 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-18 09:10:00 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-18 09:10:00 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-18 09:10:01 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-18 09:10:01 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-18 09:10:01 INFO  (GhidraRun) Ghidra startup complete (3548 ms)  
+2026-04-18 09:10:10 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loading...  
+2026-04-18 09:10:10 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loaded!  
+2026-04-18 09:10:10 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server started on port 8081  
+2026-04-18 09:10:10 INFO  (PackedDatabaseCache) Packed database cache: /var/tmp/ayslan-ghidra/packed-db-cache  
+2026-04-18 09:10:10 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2026-04-18 09:10:16 DEBUG (ToolTaskManager) Background processing started...  
+2026-04-18 09:10:16 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2026-04-18 09:10:16 INFO  (ExternalDebugFileSectionProvider) DWARF external debug information found: ExternalDebugInfo [filename=ls.debug, crc=5c09445c, hash=3a35f05c70bb56219914bdafad4bd4ddfd9fe4b1]  
+2026-04-18 09:10:16 INFO  (DWARFAnalyzer) Unable to find DWARF information, skipping DWARF analysis  
+2026-04-18 09:10:17 WARN  (DecompileCallback) Decompiling 0011ab00, pcode error at 0012a350: Unable to disassemble EXTERNAL block location: 0012a350  
+2026-04-18 09:10:19 WARN  (DecompileCallback) Decompiling 0011c270, pcode error at 0012a2c0: Unable to disassemble EXTERNAL block location: 0012a2c0  
+2026-04-18 09:10:24 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-18 09:10:24 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-18 09:10:24 INFO  (ExternalSymbolResolverAnalyzer) Resolving External Symbols of [/ls] - 116 unresolved symbols, no external libraries configured - skipping  
+2026-04-18 09:10:25 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.175 secs
+    Apply Data Archives                        0.144 secs
+    Call Convention ID                         0.002 secs
+    Call-Fixup Installer                       0.016 secs
+    Create Address Tables                      0.023 secs
+    Create Address Tables - One Time           0.012 secs
+    Create Function                            0.001 secs
+    DWARF                                      0.005 secs
+    Data Reference                             0.029 secs
+    Decompiler Switch Analysis                 5.307 secs
+    Demangler GNU                              0.045 secs
+    Disassemble Entry Points                   0.603 secs
+    ELF Scalar Operand References              0.113 secs
+    Embedded Media                             0.009 secs
+    External Entry References                  0.001 secs
+    External Symbol Resolver                   0.002 secs
+    Function ID                                0.218 secs
+    Function Start Pre Search                  0.010 secs
+    Function Start Search                      0.067 secs
+    Function Start Search After Code           0.024 secs
+    Function Start Search After Data           0.005 secs
+    GCC Exception Handlers                     0.249 secs
+    Non-Returning Functions - Discovered       0.283 secs
+    Non-Returning Functions - Known            0.006 secs
+    Reference                                  0.060 secs
+    Shared Return Calls                        0.037 secs
+    Stack                                      0.587 secs
+    Subroutine References                      0.021 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.744 secs
+-----------------------------------------------------
+     Total Time   8 secs
+-----------------------------------------------------
+  
+2026-04-18 09:10:25 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2026-04-18 09:10:25 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2026-04-18 09:10:25 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (8.903 secs)  
+2026-04-18 09:10:25 DEBUG (ToolTaskManager) Background processing complete (8.905 secs)  
+2026-04-18 09:10:27 INFO  (GhidraMCPPlugin) Stopping GhidraMCP HTTP server...  
+2026-04-18 09:10:27 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server stopped.  
+2026-04-18 09:11:26 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-18 09:11:26 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-18 09:11:26 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-18 09:11:26 INFO  (ClassSearcher) Searching for classes...  
+2026-04-18 09:11:27 INFO  (ClassSearcher) Class search complete (849 ms)  
+2026-04-18 09:11:27 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-18 09:11:27 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-18 09:11:27 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-18 09:11:27 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-18 09:11:27 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-18 09:11:27 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-18 09:11:27 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-18 09:11:27 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-18 09:11:28 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-18 09:11:28 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-18 09:11:28 INFO  (GhidraRun) Ghidra startup complete (2528 ms)  
+2026-04-18 09:11:32 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loading...  
+2026-04-18 09:11:32 INFO  (GhidraMCPPlugin) GhidraMCPPlugin loaded!  
+2026-04-18 09:11:32 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server started on port 8081  
+2026-04-18 09:11:32 INFO  (PackedDatabaseCache) Packed database cache: /var/tmp/ayslan-ghidra/packed-db-cache  
+2026-04-18 09:11:32 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2026-04-18 09:11:37 DEBUG (ToolTaskManager) Background processing started...  
+2026-04-18 09:11:37 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2026-04-18 09:11:37 INFO  (ExternalDebugFileSectionProvider) DWARF external debug information found: ExternalDebugInfo [filename=ls.debug, crc=5c09445c, hash=3a35f05c70bb56219914bdafad4bd4ddfd9fe4b1]  
+2026-04-18 09:11:37 INFO  (DWARFAnalyzer) Unable to find DWARF information, skipping DWARF analysis  
+2026-04-18 09:11:39 WARN  (DecompileCallback) Decompiling 0011ab00, pcode error at 0012a350: Unable to disassemble EXTERNAL block location: 0012a350  
+2026-04-18 09:11:39 WARN  (DecompileCallback) Decompiling 0011c270, pcode error at 0012a2c0: Unable to disassemble EXTERNAL block location: 0012a2c0  
+2026-04-18 09:11:46 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-18 09:11:46 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-18 09:11:46 INFO  (ExternalSymbolResolverAnalyzer) Resolving External Symbols of [/ls] - 116 unresolved symbols, no external libraries configured - skipping  
+2026-04-18 09:11:47 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.188 secs
+    Apply Data Archives                        0.109 secs
+    Call Convention ID                         0.004 secs
+    Call-Fixup Installer                       0.015 secs
+    Create Address Tables                      0.023 secs
+    Create Address Tables - One Time           0.015 secs
+    Create Function                            0.001 secs
+    DWARF                                      0.004 secs
+    Data Reference                             0.033 secs
+    Decompiler Switch Analysis                 6.383 secs
+    Demangler GNU                              0.047 secs
+    Disassemble Entry Points                   0.696 secs
+    ELF Scalar Operand References              0.110 secs
+    Embedded Media                             0.013 secs
+    External Entry References                  0.000 secs
+    External Symbol Resolver                   0.001 secs
+    Function ID                                0.121 secs
+    Function Start Pre Search                  0.011 secs
+    Function Start Search                      0.052 secs
+    Function Start Search After Code           0.014 secs
+    Function Start Search After Data           0.005 secs
+    GCC Exception Handlers                     0.219 secs
+    Non-Returning Functions - Discovered       0.253 secs
+    Non-Returning Functions - Known            0.005 secs
+    Reference                                  0.050 secs
+    Shared Return Calls                        0.045 secs
+    Stack                                      0.594 secs
+    Subroutine References                      0.020 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.735 secs
+-----------------------------------------------------
+     Total Time   9 secs
+-----------------------------------------------------
+  
+2026-04-18 09:11:47 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2026-04-18 09:11:47 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2026-04-18 09:11:47 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (9.914 secs)  
+2026-04-18 09:11:47 DEBUG (ToolTaskManager) Background processing complete (9.915 secs)  
+2026-04-18 09:12:47 INFO  (GhidraMCPPlugin) Stopping GhidraMCP HTTP server...  
+2026-04-18 09:12:47 INFO  (GhidraMCPPlugin) GhidraMCP HTTP server stopped.  
+2026-04-18 09:12:50 WARN  (DebuggerModulesPlugin) Plugin DebuggerModulesPlugin did not register a service handler for: interface ghidra.app.services.DebuggerAutoMappingService  
+2026-04-18 09:13:46 INFO  (ExtensionTableProvider) Extensions Changed!: Please restart Ghidra for extension changes to take effect.  
+2026-04-18 09:13:57 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-18 09:13:57 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-18 09:13:57 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-18 09:13:58 INFO  (ClassSearcher) Searching for classes...  
+2026-04-18 09:13:59 INFO  (ClassSearcher) Class search complete (887 ms)  
+2026-04-18 09:13:59 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-18 09:13:59 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-18 09:13:59 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-18 09:13:59 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-18 09:13:59 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-18 09:13:59 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-18 09:13:59 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-18 09:13:59 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-18 09:13:59 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-18 09:13:59 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-18 09:13:59 INFO  (GhidraRun) Ghidra startup complete (2393 ms)  
+2026-04-18 09:14:07 INFO  (PackedDatabaseCache) Packed database cache: /var/tmp/ayslan-ghidra/packed-db-cache  
+2026-04-18 09:14:07 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2026-04-18 09:14:11 DEBUG (ToolTaskManager) Background processing started...  
+2026-04-18 09:14:11 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2026-04-18 09:14:11 INFO  (ExternalDebugFileSectionProvider) DWARF external debug information found: ExternalDebugInfo [filename=ls.debug, crc=5c09445c, hash=3a35f05c70bb56219914bdafad4bd4ddfd9fe4b1]  
+2026-04-18 09:14:11 INFO  (DWARFAnalyzer) Unable to find DWARF information, skipping DWARF analysis  
+2026-04-18 09:14:13 WARN  (DecompileCallback) Decompiling 0011c270, pcode error at 0012a2c0: Unable to disassemble EXTERNAL block location: 0012a2c0  
+2026-04-18 09:14:15 WARN  (DecompileCallback) Decompiling 0011ab00, pcode error at 0012a350: Unable to disassemble EXTERNAL block location: 0012a350  
+2026-04-18 09:14:18 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-18 09:14:18 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-18 09:14:18 INFO  (ExternalSymbolResolverAnalyzer) Resolving External Symbols of [/ls] - 116 unresolved symbols, no external libraries configured - skipping  
+2026-04-18 09:14:19 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.187 secs
+    Apply Data Archives                        0.131 secs
+    Call Convention ID                         0.005 secs
+    Call-Fixup Installer                       0.018 secs
+    Create Address Tables                      0.023 secs
+    Create Address Tables - One Time           0.012 secs
+    Create Function                            0.002 secs
+    DWARF                                      0.005 secs
+    Data Reference                             0.028 secs
+    Decompiler Switch Analysis                 4.753 secs
+    Demangler GNU                              0.055 secs
+    Disassemble Entry Points                   0.617 secs
+    ELF Scalar Operand References              0.119 secs
+    Embedded Media                             0.009 secs
+    External Entry References                  0.001 secs
+    External Symbol Resolver                   0.002 secs
+    Function ID                                0.103 secs
+    Function Start Pre Search                  0.011 secs
+    Function Start Search                      0.061 secs
+    Function Start Search After Code           0.018 secs
+    Function Start Search After Data           0.006 secs
+    GCC Exception Handlers                     0.221 secs
+    Non-Returning Functions - Discovered       0.289 secs
+    Non-Returning Functions - Known            0.007 secs
+    Reference                                  0.064 secs
+    Shared Return Calls                        0.043 secs
+    Stack                                      0.572 secs
+    Subroutine References                      0.016 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.760 secs
+-----------------------------------------------------
+     Total Time   8 secs
+-----------------------------------------------------
+  
+2026-04-18 09:14:19 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2026-04-18 09:14:19 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2026-04-18 09:14:19 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (8.287 secs)  
+2026-04-18 09:14:19 DEBUG (ToolTaskManager) Background processing complete (8.288 secs)  
+2026-04-18 09:18:59 INFO  (RecoveryMgr) Sat Apr 18 09:18:59 GMT-03:00 2026 Recovery snapshot created: /home/ayslan/Projects/Ghidra/Test.rep/idata/00/~00000001.db/snapshotA.grf  
+2026-04-18 09:29:14 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/ghidra/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-04-18 09:29:14 INFO  (LoggingInitialization) Using log file: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/application.log  
+2026-04-18 09:29:15 INFO  (Preferences) Loading user preferences: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/preferences  
+2026-04-18 09:29:15 INFO  (ClassSearcher) Searching for classes...  
+2026-04-18 09:29:16 INFO  (ClassSearcher) Class search complete (910 ms)  
+2026-04-18 09:29:16 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-04-18 09:29:16 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-04-18 09:29:16 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-04-18 09:29:16 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-04-18 09:29:16 INFO  (GhidraRun) User ayslan started Ghidra.  
+2026-04-18 09:29:16 INFO  (GhidraRun) User settings directory: /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV  
+2026-04-18 09:29:16 INFO  (GhidraRun) User temp directory: /tmp/ayslan-ghidra  
+2026-04-18 09:29:16 INFO  (GhidraRun) User cache directory: /var/tmp/ayslan-ghidra  
+2026-04-18 09:29:16 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2026-04-18 09:29:16 INFO  (DefaultProject) Opening project: /home/ayslan/Projects/Ghidra/Test  
+2026-04-18 09:29:17 INFO  (GhidraRun) Ghidra startup complete (2391 ms)  
+2026-04-18 09:29:20 INFO  (PackedDatabaseCache) Packed database cache: /var/tmp/ayslan-ghidra/packed-db-cache  
+2026-04-18 09:29:20 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/ghidra/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2026-04-18 09:29:24 DEBUG (ToolTaskManager) Background processing started...  
+2026-04-18 09:29:24 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2026-04-18 09:29:24 INFO  (ExternalDebugFileSectionProvider) DWARF external debug information found: ExternalDebugInfo [filename=ls.debug, crc=5c09445c, hash=3a35f05c70bb56219914bdafad4bd4ddfd9fe4b1]  
+2026-04-18 09:29:24 INFO  (DWARFAnalyzer) Unable to find DWARF information, skipping DWARF analysis  
+2026-04-18 09:29:25 WARN  (DecompileCallback) Decompiling 0011c270, pcode error at 0012a2c0: Unable to disassemble EXTERNAL block location: 0012a2c0  
+2026-04-18 09:29:28 WARN  (DecompileCallback) Decompiling 0011ab00, pcode error at 0012a350: Unable to disassemble EXTERNAL block location: 0012a350  
+2026-04-18 09:29:31 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-18 09:29:31 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib_64  
+2026-04-18 09:29:31 INFO  (ExternalSymbolResolverAnalyzer) Resolving External Symbols of [/ls] - 116 unresolved symbols, no external libraries configured - skipping  
+2026-04-18 09:29:32 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.165 secs
+    Apply Data Archives                        0.121 secs
+    Call Convention ID                         0.006 secs
+    Call-Fixup Installer                       0.016 secs
+    Create Address Tables                      0.022 secs
+    Create Address Tables - One Time           0.011 secs
+    Create Function                            0.001 secs
+    DWARF                                      0.004 secs
+    Data Reference                             0.030 secs
+    Decompiler Switch Analysis                 4.635 secs
+    Demangler GNU                              0.035 secs
+    Disassemble Entry Points                   0.599 secs
+    ELF Scalar Operand References              0.118 secs
+    Embedded Media                             0.013 secs
+    External Entry References                  0.000 secs
+    External Symbol Resolver                   0.002 secs
+    Function ID                                0.114 secs
+    Function Start Pre Search                  0.009 secs
+    Function Start Search                      0.051 secs
+    Function Start Search After Code           0.014 secs
+    Function Start Search After Data           0.004 secs
+    GCC Exception Handlers                     0.231 secs
+    Non-Returning Functions - Discovered       0.282 secs
+    Non-Returning Functions - Known            0.005 secs
+    Reference                                  0.052 secs
+    Shared Return Calls                        0.041 secs
+    Stack                                      0.560 secs
+    Subroutine References                      0.024 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.762 secs
+-----------------------------------------------------
+     Total Time   7 secs
+-----------------------------------------------------
+  
+2026-04-18 09:29:32 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2026-04-18 09:29:32 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2026-04-18 09:29:32 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (8.04 secs)  
+2026-04-18 09:29:32 DEBUG (ToolTaskManager) Background processing complete (8.041 secs)  
+2026-04-18 09:34:17 INFO  (RecoveryMgr) Sat Apr 18 09:34:17 GMT-03:00 2026 Recovery snapshot created: /home/ayslan/Projects/Ghidra/Test.rep/idata/00/~00000001.db/snapshotA.grf  
+2026-04-18 09:55:59 INFO  (ThemeUtils) Saving theme to /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/themes/base16-gigavolt.theme  
+2026-04-18 09:57:53 INFO  (ThemeUtils) Saving theme to /home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/themes/base16-eva-dim.theme  
+2026-04-18 10:04:17 INFO  (RecoveryMgr) Sat Apr 18 10:04:17 GMT-03:00 2026 Recovery snapshot created: /home/ayslan/Projects/Ghidra/Test.rep/idata/00/~00000001.db/snapshotB.grf  

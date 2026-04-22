@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# ppd-status — Polybar, tail=true (event-driven via gdbus)
+# No config.ini: tail = true  (sem interval)
+
+render() {
+    local current="$1"
+    local icon color
+    case "$current" in
+    performance)
+        icon="󰛕 "
+        color="#f7768e"
+        ;;
+    balanced)
+        icon="󰁹 "
+        color="#9ece6a"
+        ;;
+    power-saver)
+        icon="󰌪 "
+        color="#02d2f7"
+        ;;
+    *)
+        icon="  "
+        color="#e0e8ff"
+        ;;
+    esac
+    printf '%%{F%s}%s%s%%{F-}\n' "$color" "$icon" "$current"
+}
+
+# Estado inicial — imprime imediatamente para o polybar mostrar algo
+current=$(powerprofilesctl get 2>/dev/null)
+[[ -z "$current" ]] && echo "N/A" || render "$current"
+
+# Escuta mudanças — extrai o perfil direto do sinal, sem chamar powerprofilesctl
+# Loop externo reconecta automaticamente se o daemon reiniciar
+while true; do
+    gdbus monitor --system \
+        --dest net.hadess.PowerProfiles \
+        --object-path /net/hadess/PowerProfiles \
+        2>/dev/null |
+        while IFS= read -r line; do
+            if echo "$line" | grep -q "ActiveProfile"; then
+                current=$(echo "$line" | sed "s/.*'ActiveProfile': <'\([^']*\)'>.*/\1/")
+                [[ -n "$current" ]] && render "$current"
+            fi
+        done
+    # gdbus encerrou (daemon caiu) — aguarda e reconecta
+    sleep 2
+done

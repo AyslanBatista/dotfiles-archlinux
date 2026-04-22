@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# disk — Polybar, roda uma vez (interval=30 no config.ini)
+# Mount point via BLOCK_INSTANCE, threshold via ALERT_LOW.
+
+DIR="${BLOCK_INSTANCE:-/}"
+ALERT_LOW="${ALERT_LOW:-10}"
+
+ICON=""   # preencha com o ícone desejado (ex: nf-md-harddisk U+F0A0)
+
+df -h -P -l "$DIR" 2>/dev/null | awk -v alert_low="$ALERT_LOW" -v icon="$ICON" '
+NR == 1 { next }
+{
+    free = $4
+    use  = $5
+    gsub(/%$/, "", use)
+
+    if (100 - use + 0 < alert_low + 0) color="#f7768e"
+    else                               color="#e0e8ff"
+
+    printf "%%{F%s}%s%s%%{F-}\n", color, icon, free
+    exit
+}
+'

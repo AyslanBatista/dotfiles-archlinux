@@ -1,0 +1,7 @@
+# /etc/environment
+# Parsed by pam_env module
+# Syntax: simple "KEY=VAL" pairs on separate lines
+
+BROWSER=brave
+EDITOR=nvim
+QT_QPA_PLATFORMTHEME="qt5ct"

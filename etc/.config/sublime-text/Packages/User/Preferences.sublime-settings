@@ -1,0 +1,144 @@
+{
+    // ============================================
+    // APARÊNCIA E TEMA
+    // ============================================
+    "theme": "Adaptive.sublime-theme",
+    "color_scheme": "Mariana_TokyoNight_Moon.sublime-color-scheme",
+
+    // ============================================
+    // FONTE E CURSOR
+    // ============================================
+    "font_face": "Fira Code",
+    "font_size": 13.5,
+    "font_options": ["subpixel_antialias"],
+    "caret_style": "solid",
+    "caret_extra_width": 2,
+    "wide_caret": true,
+
+    // ============================================
+    // RULERS
+    // ============================================
+    "rulers": [80, 100, 120],
+
+    // ============================================
+    // BRACKETS (desabilitado — usa BracketHighlighter)
+    // ============================================
+    "match_brackets": false,
+    "match_brackets_angle": false,
+    "match_brackets_braces": false,
+    "match_brackets_content": false,
+    "match_brackets_square": false,
+    "match_tags": false,
+
+    // ============================================
+    // COMPORTAMENTO DE ARQUIVOS
+    // ============================================
+    "save_on_focus_lost": true,
+    "ensure_newline_at_eof_on_save": true,
+    "trim_trailing_white_space_on_save": "all",
+
+    // ============================================
+    // ARQUIVOS E PASTAS OCULTAS
+    // ============================================
+    "folder_exclude_patterns": [
+        ".git",
+        ".mypy_cache",
+        "__pycache__",
+        "*.egg-info",
+        ".pytest_cache",
+        ".venv",
+        "venv",
+        "env",
+        ".env",
+        "node_modules",
+        ".turbo",
+        "dist",
+    ],
+    "file_exclude_patterns": [
+        "*.pyc",
+        "*.pyo"
+    ],
+
+    // ============================================
+    // EDITOR - COMPORTAMENTO
+    // ============================================
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "auto_match_enabled": true,
+    "auto_indent": true,
+    "smart_indent": true,
+    "indent_to_bracket": true,
+    "trim_automatic_white_space": true,
+    "use_tab_stops": true,
+
+    // ============================================
+    // AUTOCOMPLETION
+    // ============================================
+    "auto_complete": true,
+    "auto_complete_commit_on_tab": true,
+    "auto_complete_with_fields": true,
+    "auto_complete_delay": 50,
+
+    // ============================================
+    // VISUAL E UI
+    // ============================================
+    "highlight_line": true,
+    "line_padding_bottom": 1,
+    "line_padding_top": 1,
+    "show_full_path": true,
+    "preview_on_click": false,
+    "highlight_modified_tabs": true,
+    "draw_minimap_border": true,
+    "always_show_minimap_viewport": true,
+    "line_numbers": true,
+    "gutter": true,
+    "margin": 4,
+    "fold_buttons": true,
+    "draw_white_space": [],
+    "show_definitions": false,
+    "indent_guide_options": ["draw_normal", "draw_active"],
+
+    // ============================================
+    // SCROLL E NAVEGAÇÃO
+    // ============================================
+    "scroll_past_end": true,
+    "smooth_scroll": true,
+
+    // ============================================
+    // WORD WRAP
+    // ============================================
+    "word_wrap": false,
+    "wrap_width": 0,
+
+    // ============================================
+    // PERFORMANCE
+    // ============================================
+    "index_workers": 2,
+    "index_files": false,
+
+    // ============================================
+    // TELEMETRIA E PRIVACIDADE
+    // ============================================
+    "enable_telemetry": false,
+    "update_check": false,
+
+    // ============================================
+    // SESSÃO E WORKSPACE
+    // ============================================
+    "hot_exit": false,
+    "remember_open_files": false,
+    "close_windows_when_empty": false,
+
+    // ============================================
+    // OUTROS
+    // ============================================
+    "drag_text": true,
+    "show_encoding": true,
+    "show_line_endings": true,
+    "spell_check": false,
+    "animation_enabled": true,
+    "tree_animation_enabled": true,
+    "ignored_packages": [
+        "Vintage",
+    ],
+}

@@ -1,0 +1,4 @@
+name = Dark
+lookAndFeel = Flat Dark
+useDarkDefaults = true
+font.listing.base = Fira Code SemiBold-PLAIN-12

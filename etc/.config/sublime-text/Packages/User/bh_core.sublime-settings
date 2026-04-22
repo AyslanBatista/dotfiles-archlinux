@@ -1,0 +1,46 @@
+{
+    // Apenas customizações que diferem dos defaults do BH.
+    // Não copiar o arquivo inteiro evita bloquear updates automáticos das regras.
+
+    // Estilos personalizados (forma correta via user_bracket_styles)
+    "user_bracket_styles": {
+        "default": {
+            "icon": "dot",
+            "color": "brackethighlighter.default",
+            "style": "highlight"
+        },
+        "square": {
+            "icon": "dot",
+            "color": "brackethighlighter.square",
+            "style": "highlight"
+        },
+        "curly": {
+            "icon": "dot",
+            "color": "brackethighlighter.curly",
+            "style": "highlight"
+        },
+        "angle": {
+            "icon": "dot",
+            "color": "brackethighlighter.angle",
+            "style": "highlight"
+        },
+        "tag": {
+            "icon": "dot",
+            "color": "brackethighlighter.tag",
+            "style": "highlight"
+        },
+        "unmatched": {
+            "icon": "question",
+            "color": "brackethighlighter.unmatched",
+            "style": "outline"
+        }
+    },
+
+    // Comportamento — só incluir o que você realmente quer diferente do default
+    "content_highlight_bar": true,
+    "show_offscreen_bracket_popup": true,
+
+    // CORRIGIDO: true evita highlights incorretos dentro de strings/comentários
+    "ignore_string": true,
+    "ignore_comment": true
+}

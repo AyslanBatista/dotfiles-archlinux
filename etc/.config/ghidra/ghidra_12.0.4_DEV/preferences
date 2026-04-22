@@ -1,0 +1,31 @@
+#User Preferences
+#Sat Apr 18 10:12:46 GMT-03:00 2026
+G_FILE_CHOOSER.HEIGHT.Choose\ Theme\ File=600
+G_FILE_CHOOSER.HEIGHT.Open\ a\ Ghidra\ Project=600
+G_FILE_CHOOSER.HEIGHT.Select\ Extension=600
+G_FILE_CHOOSER.HEIGHT.Select\ a\ Ghidra\ Project\ Directory=600
+G_FILE_CHOOSER.VIEW_STYLE.Choose\ Theme\ File=SimpleView
+G_FILE_CHOOSER.VIEW_STYLE.Open\ a\ Ghidra\ Project=SimpleView
+G_FILE_CHOOSER.VIEW_STYLE.Select\ Extension=SimpleView
+G_FILE_CHOOSER.VIEW_STYLE.Select\ a\ Ghidra\ Project\ Directory=SimpleView
+G_FILE_CHOOSER.WIDTH.Choose\ Theme\ File=800
+G_FILE_CHOOSER.WIDTH.Open\ a\ Ghidra\ Project=800
+G_FILE_CHOOSER.WIDTH.Select\ Extension=800
+G_FILE_CHOOSER.WIDTH.Select\ a\ Ghidra\ Project\ Directory=800
+GhidraShowWhatsNew=false
+LAST_USED_OPTIONS_CONFIG=Standard Defaults
+LastExtensionImportDirectory=/home/ayslan/Downloads/GhidraMCP-release-1-4
+LastImportFile=/home/ayslan/Downloads/ls
+LastOpenedProject=/home/ayslan/Projects/Ghidra/Test
+ProjectDirectory=/home/ayslan/Projects/Ghidra/
+RECENT_0=/home/ayslan/Downloads/Ghidra-Themes/highlight_js_themes
+RECENT_1=/home/ayslan/Downloads/GhidraMCP-release-1-4
+RECENT_2=/home/ayslan/Downloads
+RECENT_3=/home/ayslan/Projects/Ghidra
+RecentProjects=/home/ayslan/Projects/Ghidra/Test
+SHOW.HELP.NAVIGATION.AID=true
+SHOW_TIPS=false
+TIP_INDEX=2
+Theme=File\:/home/ayslan/.config/ghidra/ghidra_12.0.4_DEV/themes/base16-eva-dim.theme
+USER_AGREEMENT=ACCEPT
+ViewedProjects=

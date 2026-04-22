@@ -1,0 +1,11 @@
+{
+    "debounce_delay": 1000,
+    "diff_algorithm": "patience",
+    "show_status_bar_text": true,
+    "protected_regions": [
+        "bookmarks",
+        "lsp_error",
+        "lsp_warning",
+        "lsp_info"
+    ]
+}

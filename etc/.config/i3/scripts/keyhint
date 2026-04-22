@@ -1,0 +1,213 @@
+#!/usr/bin/env bash
+# keyhint — mostra atalhos do i3wm via rofi
+# Mapeamento explícito por comando; edite DESC se mudar um bind
+
+I3_CONFIG="$HOME/.config/i3/config"
+
+# ── Resolve variáveis do config ($mod, $ws*, etc.) ───────────────────────────
+declare -A i3vars
+while IFS= read -r line; do
+    var=$(awk '{print $2}' <<<"$line")
+    val=$(awk '{$1=$2=""; sub(/^[[:space:]]+/,"",$0); print $0}' <<<"$line")
+    val="${val%\"}"
+    val="${val#\"}"
+    i3vars["$var"]="$val"
+done < <(grep '^set ' "$I3_CONFIG")
+
+resolve() {
+    local s="$1"
+    for v in "${!i3vars[@]}"; do
+        s="${s//$v/${i3vars[$v]}}"
+    done
+    echo "$s"
+}
+
+# ── Humaniza nomes de teclas ─────────────────────────────────────────────────
+humanize() {
+    local k="$1"
+    k="${k//Mod4/Super}"
+    k="${k//Mod1/Alt}"
+    k="${k//Return/Enter}"
+    k="${k//XF86AudioRaiseVolume/Vol+}"
+    k="${k//XF86AudioLowerVolume/Vol-}"
+    k="${k//XF86AudioMute/Mute}"
+    k="${k//XF86AudioMicMute/MicMute}"
+    k="${k//XF86AudioPlay/Play}"
+    k="${k//XF86AudioNext/Next}"
+    k="${k//XF86AudioPrev/Prev}"
+    k="${k//XF86MonBrightnessUp/Bright+}"
+    k="${k//XF86MonBrightnessDown/Bright-}"
+    echo "$k"
+}
+
+# ── Dicionário: comando → descrição ──────────────────────────────────────────
+declare -A DESC
+
+DESC["focus left"]="Focus: esquerda"
+DESC["focus down"]="Focus: baixo"
+DESC["focus up"]="Focus: cima"
+DESC["focus right"]="Focus: direita"
+DESC["focus mode_toggle"]="Focus: alternar flutuante/tiling"
+DESC["focus parent"]="Focus: container pai"
+DESC["move left"]="Mover janela: esquerda"
+DESC["move down"]="Mover janela: baixo"
+DESC["move up"]="Mover janela: cima"
+DESC["move right"]="Mover janela: direita"
+DESC["split h"]="Split horizontal"
+DESC["split v"]="Split vertical"
+DESC["fullscreen toggle"]="Fullscreen"
+DESC["floating toggle"]="Toggle flutuante"
+DESC["layout stacking"]="Layout: stacking"
+DESC["layout toggle split"]="Layout: toggle split"
+DESC["resize shrink width 1 px or 1 ppt"]="Resize: encolher largura"
+DESC["resize grow height 1 px or 1 ppt"]="Resize: aumentar altura"
+DESC["resize shrink height 1 px or 1 ppt"]="Resize: encolher altura"
+DESC["resize grow width 1 px or 1 ppt"]="Resize: aumentar largura"
+DESC["kill"]="Fechar janela"
+DESC["reload"]="Recarregar config i3"
+DESC["restart"]="Reiniciar i3"
+DESC["workspace next"]="Próximo workspace"
+DESC["workspace prev"]="Workspace anterior"
+DESC["ghostty +new-window"]="Terminal (Ghostty)"
+DESC["xfce4-terminal"]="Terminal (XFCE)"
+DESC["/usr/bin/subl"]="Sublime Text"
+DESC["/usr/bin/brave"]="Brave Browser"
+DESC["/usr/bin/thunar"]="Thunar (arquivos)"
+DESC["/usr/bin/discord"]="Discord"
+DESC["/usr/bin/Telegram"]="Telegram"
+DESC["/usr/bin/obs"]="OBS Studio"
+DESC["/usr/bin/zoom"]="Zoom"
+DESC["virt-manager"]="Virt-Manager (VMs)"
+DESC["rofi -show drun -show-icons"]="Rofi: lançador de apps"
+DESC["rofi -show emoji -modi emoji"]="Rofi: emoji picker"
+DESC["rofi -show window"]="Rofi: trocar janela"
+DESC["~/.config/i3/scripts/empty_workspace"]="Ir para workspace vazio"
+DESC["~/.config/i3/scripts/qrscan.sh"]="QR scan"
+DESC["~/.config/i3/scripts/rofi-beats.sh"]="Rofi Beats (música)"
+DESC["~/.config/i3/scripts/powermenu"]="Power menu"
+DESC["~/.config/i3/scripts/lock-kiosk.sh"]="Bloquear tela"
+DESC["~/.config/i3/scripts/power-profiles"]="Perfil de energia"
+DESC["~/.config/i3/scripts/keyhint"]="Este menu (keyhint)"
+DESC["~/.config/i3/scripts/volume_brightness.sh volume_up"]="Volume +"
+DESC["~/.config/i3/scripts/volume_brightness.sh volume_down"]="Volume -"
+DESC["~/.config/i3/scripts/volume_brightness.sh volume_mute"]="Mute/Unmute"
+DESC["~/.config/i3/scripts/volume_brightness.sh brightness_up"]="Brilho +"
+DESC["~/.config/i3/scripts/volume_brightness.sh brightness_down"]="Brilho -"
+DESC["pactl set-sink-volume @DEFAULT_SINK@ +1% && pkill -RTMIN+1 i3blocks"]="Volume fino +"
+DESC["pactl set-sink-volume @DEFAULT_SINK@ -1% && pkill -RTMIN+1 i3blocks"]="Volume fino -"
+DESC["pactl set-source-mute @DEFAULT_SOURCE@ toggle"]="Mute microfone"
+DESC["playerctl play-pause"]="Play / Pause"
+DESC["playerctl next"]="Próxima faixa"
+DESC["playerctl previous"]="Faixa anterior"
+DESC['scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"']="Screenshot (scrot)"
+DESC["flameshot gui"]="Screenshot (Flameshot)"
+
+# ── Lookup ────────────────────────────────────────────────────────────────────
+lookup_desc() {
+    local raw="$1"
+    [[ -n "${DESC[$raw]}" ]] && echo "${DESC[$raw]}" && return
+    local s="$raw"
+    s="${s#exec --no-startup-id }"
+    s="${s#exec }"
+    s="${s#--no-startup-id }"
+    [[ -n "${DESC[$s]}" ]] && echo "${DESC[$s]}" && return
+    local bin
+    bin=$(basename "$(awk '{print $1}' <<<"$s")")
+    echo "${bin%.sh}"
+}
+
+# ── Categoria ────────────────────────────────────────────────────────────────
+categorize() {
+    local key="$1" cmd="$2"
+    [[ "$key" =~ Vol|Mute|Play|Next|Prev|Bright|Audio|XF86 ]] && echo "MEDIA" && return
+    case "$cmd" in
+    focus\ * | "focus mode_toggle" | "focus parent") echo "FOCUS" ;;
+    move\ left | move\ right | move\ up | move\ down) echo "FOCUS" ;;
+    workspace\ * | move\ container*) echo "WORKSPACES" ;;
+    split\ * | fullscreen* | layout* | floating* | resize*) echo "LAYOUT" ;;
+    kill | reload | restart | *lock* | *powermenu* | \
+        *power-profile* | *keyhint* | *pactl* | *playerctl*) echo "SYSTEM" ;;
+    *) echo "APPS" ;;
+    esac
+}
+
+ws_switch_done=false
+ws_move_done=false
+arrow_focus_done=false
+arrow_move_done=false
+
+declare -A entries
+
+# ── Parse principal ───────────────────────────────────────────────────────────
+while IFS= read -r rawline; do
+    rest="${rawline#bindsym }"
+    key=$(awk '{print $1}' <<<"$rest")
+    # *** TRIM: remove espaços extras que o i3 config usa pra alinhar ***
+    cmd=$(cut -d' ' -f2- <<<"$rest" | sed 's/^[[:space:]]*//' | tr -s ' ')
+
+    key_r=$(resolve "$key")
+    cmd_r=$(resolve "$cmd")
+
+    if [[ "$cmd" =~ ^workspace\ \$ws[0-9]+$ ]]; then
+        $ws_switch_done && continue
+        ws_switch_done=true
+        entries[WORKSPACES]+="$(printf '%-44s %s' 'Ir para workspace' 'Super + [1-0]')"$'\n'
+        continue
+    fi
+
+    if [[ "$cmd" =~ ^move\ container\ to\ workspace\ \$ws ]]; then
+        $ws_move_done && continue
+        ws_move_done=true
+        entries[WORKSPACES]+="$(printf '%-44s %s' 'Mover janela para workspace' 'Super + Shift + [1-0]')"$'\n'
+        continue
+    fi
+
+    if [[ "$cmd_r" =~ ^focus\ (left|right|up|down)$ ]] &&
+        [[ "$key_r" =~ (Left|Right|Up|Down)$ ]]; then
+        $arrow_focus_done && continue
+        arrow_focus_done=true
+        entries[FOCUS]+="$(printf '%-44s %s' 'Focus (setas)' 'Super + [←↓↑→]')"$'\n'
+        continue
+    fi
+
+    if [[ "$cmd_r" =~ ^move\ (left|right|up|down)$ ]] &&
+        [[ "$key_r" =~ Shift\+(Left|Right|Up|Down)$ ]]; then
+        $arrow_move_done && continue
+        arrow_move_done=true
+        entries[FOCUS]+="$(printf '%-44s %s' 'Mover janela (setas)' 'Super + Shift + [←↓↑→]')"$'\n'
+        continue
+    fi
+
+    key_h=$(humanize "$key_r")
+    desc=$(lookup_desc "$cmd_r")
+    cat=$(categorize "$key_h" "$cmd_r")
+
+    entries[$cat]+="$(printf '%-44s %s' "$desc" "$key_h")"$'\n'
+
+done < <(grep '^bindsym' "$I3_CONFIG")
+
+# ── Monta saída ───────────────────────────────────────────────────────────────
+declare -A headers=(
+    [APPS]="── APPS ──────────────────────────────────────────────"
+    [FOCUS]="── FOCUS & MOVIMENTO ────────────────────────────────"
+    [LAYOUT]="── LAYOUT ───────────────────────────────────────────"
+    [WORKSPACES]="── WORKSPACES ────────────────────────────────────────"
+    [MEDIA]="── MÍDIA ────────────────────────────────────────────"
+    [SYSTEM]="── SISTEMA ──────────────────────────────────────────"
+)
+cat_order=(APPS FOCUS LAYOUT WORKSPACES MEDIA SYSTEM)
+
+output=""
+for cat in "${cat_order[@]}"; do
+    [[ -z "${entries[$cat]}" ]] && continue
+    output+="${headers[$cat]}"$'\n'
+    output+="${entries[$cat]}"
+done
+
+echo "$output" | grep -v '^$' | rofi \
+    -dmenu \
+    -i \
+    -no-custom \
+    -p "Atalhos i3" \
+    -theme-str 'listview { lines: 24; }' \
+    >/dev/null 2>&1

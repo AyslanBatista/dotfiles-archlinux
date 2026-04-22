@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# gpu_usage — Polybar, tail=true (nvidia-smi dmon em loop contínuo)
+# Não relança nvidia-smi a cada intervalo — fica vivo e lê stdout continuamente.
+# No config.ini: tail = true, interval = 0
+
+ICON="󰞡 "
+
+render() {
+    local gpu_usage="$1"
+    local color
+    if ((gpu_usage > 90)); then
+        color="#f7768e"
+    elif ((gpu_usage > 70)); then
+        color="#FFA500"
+    else
+        color="#e0e8ff"
+    fi
+    printf "%%{F%s}%s%02d%%%%{F-}\n" "$color" "$ICON" "$gpu_usage"
+}
+
+# Verifica se nvidia-smi está disponível
+if ! command -v nvidia-smi &>/dev/null; then
+    echo "N/A"
+    exit 0
+fi
+
+# Estado inicial — uma leitura rápida para mostrar algo imediatamente
+initial=$(nvidia-smi --query-gpu=utilization.gpu \
+    --format=csv,noheader,nounits 2>/dev/null | tr -d ' ')
+if [[ "$initial" =~ ^[0-9]+$ ]]; then
+    render "$initial"
+else
+    echo "N/A"
+    exit 0
+fi
+
+# Loop contínuo via dmon — atualiza a cada 2 segundos sem relançar nvidia-smi
+# dmon -s u: só coluna de utilização | -d 2: intervalo de 2s
+nvidia-smi dmon -s u -d 2 2>/dev/null | \
+while IFS= read -r line; do
+    # Ignora linhas de header (começam com # ou são vazias)
+    [[ "$line" =~ ^#.*$ || -z "$line" ]] && continue
+
+    # Extrai o campo sm (shader/compute = GPU utilization geral)
+    gpu_usage=$(echo "$line" | awk '{print $2}')
+
+    [[ "$gpu_usage" =~ ^[0-9]+$ ]] || continue
+    render "$gpu_usage"
+done

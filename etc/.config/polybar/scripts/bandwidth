@@ -1,0 +1,181 @@
+#!/usr/bin/env bash
+iface="${BLOCK_INSTANCE}"
+iface="${IFACE:-$iface}"
+dt="${DT:-3}"
+unit="${UNIT:-MB}"
+
+COLOR_NORMAL="${COLOR_NORMAL:-#e0e8ff}"
+COLOR_ACTIVE="${COLOR_ACTIVE:-#02d2f7}"
+
+default_interface() {
+    ip route 2>/dev/null | awk '/^default via/ {print $5; exit}'
+}
+
+best_interface() {
+    local candidates
+    candidates=$(ip route 2>/dev/null | awk '/^default via/ {print $5}')
+
+    local best_iface="" best_bytes=0
+    while IFS= read -r candidate; do
+        [ -z "$candidate" ] && continue
+        local line rx tx total
+        line=$(grep "^[ ]*${candidate}:" /proc/net/dev 2>/dev/null)
+        rx=$(awk '{print $2}'  <<<"$line")
+        tx=$(awk '{print $10}' <<<"$line")
+        total=$(( ${rx:-0} + ${tx:-0} ))
+        if [ "$total" -gt "$best_bytes" ]; then
+            best_bytes=$total
+            best_iface=$candidate
+        fi
+    done <<<"$candidates"
+
+    echo "${best_iface:-$(default_interface)}"
+}
+
+is_wireless() {
+    [ -d "/sys/class/net/${1}/wireless" ]
+}
+
+resolve_interface() {
+    [ -n "$iface" ] && echo "$iface" && return
+    best_interface
+}
+
+wifi_ssid() {
+    nmcli -t -f active,ssid dev wifi 2>/dev/null \
+        | awk -F: '/^yes/ { print $2; exit }'
+}
+
+case "$unit" in
+KB | KByte | KBytes) bytes_per_unit=$((1024)) ;;
+MB | MByte | MBytes) bytes_per_unit=$((1024 * 1024)) ;;
+GB | GByte | GBytes) bytes_per_unit=$((1024 * 1024 * 1024)) ;;
+*) bytes_per_unit=$((1024 * 1024)) ;;
+esac
+
+scalar=$((bytes_per_unit * dt))
+
+current_iface=$(resolve_interface)
+while [ -z "$current_iface" ]; do
+    printf '%%{F%s}󰈀 No interface%%{F-}\n' "$COLOR_NORMAL"
+    sleep "$dt"
+    current_iface=$(resolve_interface)
+done
+
+while true; do
+
+    if is_wireless "$current_iface"; then
+        # ------------------------------------------------------------------
+        # BLOCO WIRELESS
+        # Cor sempre branca (COLOR_NORMAL). Só o ícone de sinal wifi.
+        # Formato: 󰤨 Aparecido 0.14/0.03 MB/s
+        # ------------------------------------------------------------------
+        ssid=$(wifi_ssid)
+        sig_file=$(mktemp /tmp/polybar_wifi_sig.XXXXXX)
+        echo "󰤯" > "$sig_file"
+
+        (
+            while [ -f "$sig_file" ]; do
+                dbm=$(awk -v iface="wlan0:" '
+                    $1 == iface {
+                        gsub(/[^0-9\-]/, " ", $0)
+                        split($0, f)
+                        print int(f[4])
+                        exit
+                    }
+                ' /proc/net/wireless 2>/dev/null)
+                if   [ "${dbm:--99}" -ge -55 ]; then icon="󰤨"
+                elif [ "${dbm:--99}" -ge -65 ]; then icon="󰤥"
+                elif [ "${dbm:--99}" -ge -75 ]; then icon="󰤢"
+                elif [ "${dbm:--99}" -ge -85 ]; then icon="󰤟"
+                else                                 icon="󰤯"
+                fi
+                echo "$icon" > "$sig_file"
+                sleep "$dt"
+            done
+        ) &
+        sig_pid=$!
+
+        init_line=$(grep "^[ ]*${current_iface}:" /proc/net/dev)
+        init_rx=$(awk '{print $2}'  <<<"$init_line")
+        init_tx=$(awk '{print $10}' <<<"$init_line")
+
+        (while true; do cat /proc/net/dev; sleep "$dt"; done) |
+            stdbuf -oL grep "^[ ]*${current_iface}:" |
+            awk -v scalar="$scalar" -v unit="$unit" \
+                -v cn="$COLOR_NORMAL" \
+                -v old_rx="$init_rx" -v old_tx="$init_tx" \
+                -v ssid="$ssid" -v sig_file="$sig_file" '
+        {
+            rx = ($2  - old_rx) / scalar
+            tx = ($10 - old_tx) / scalar
+            old_rx = $2
+            old_tx = $10
+            if (rx >= 0 && tx >= 0) {
+                sig = "󰤯"
+                if ((getline sig < sig_file) <= 0) sig = "󰤯"
+                close(sig_file)
+
+                printf "%%{F%s}%s %s %.2f/%.2f %s/s%%{F-}\n",
+                    cn, sig, ssid, rx, tx, unit
+                fflush(stdout)
+            }
+        }' &
+        awk_pid=$!
+
+        while true; do
+            sleep "$dt"
+            new_iface=$(resolve_interface)
+            if [ "$new_iface" != "$current_iface" ]; then
+                kill "$awk_pid" 2>/dev/null
+                kill "$sig_pid" 2>/dev/null
+                rm -f "$sig_file"
+                current_iface="$new_iface"
+                break
+            fi
+        done
+
+    else
+        # ------------------------------------------------------------------
+        # BLOCO ETHERNET — original intacto
+        # ------------------------------------------------------------------
+        init_line=$(grep "^[ ]*${current_iface}:" /proc/net/dev)
+        init_rx=$(awk '{print $2}'  <<<"$init_line")
+        init_tx=$(awk '{print $10}' <<<"$init_line")
+
+        (while true; do cat /proc/net/dev; sleep "$dt"; done) |
+            stdbuf -oL grep "^[ ]*${current_iface}:" |
+            awk -v scalar="$scalar" -v unit="$unit" \
+                -v cn="$COLOR_NORMAL" -v ca="$COLOR_ACTIVE" \
+                -v old_rx="$init_rx" -v old_tx="$init_tx" '
+        {
+            rx = ($2  - old_rx) / scalar
+            tx = ($10 - old_tx) / scalar
+            old_rx = $2
+            old_tx = $10
+            if (rx >= 0 && tx >= 0) {
+                has_rx = (rx > 0.1)
+                has_tx = (tx > 0.1)
+                if      (has_rx && has_tx) { icon = "󰛴"; color = ca }
+                else if (has_rx)           { icon = "󰇚"; color = ca }
+                else if (has_tx)           { icon = "󰕒"; color = ca }
+                else                       { icon = "󰈀"; color = cn }
+                printf "%%{F%s}%s %1.0f/%1.0f %s/s%%{F-}\n", color, icon, rx, tx, unit
+                fflush(stdout)
+            }
+        }' &
+        awk_pid=$!
+
+        while true; do
+            sleep "$dt"
+            new_iface=$(resolve_interface)
+            if [ "$new_iface" != "$current_iface" ]; then
+                kill "$awk_pid" 2>/dev/null
+                current_iface="$new_iface"
+                break
+            fi
+        done
+
+    fi
+
+done

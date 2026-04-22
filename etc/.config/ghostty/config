@@ -1,0 +1,154 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# GHOSTTY CONFIG — Arch Linux / i3wm / NVIDIA GTX 1660 SUPER
+# Cores: XFCE palette | Tokyo Night Moon fg/bg
+# Última revisão: Abril 2026
+#
+# ARQUITETURA DE INSTÂNCIA:
+#   O processo é gerenciado pelo systemd user service.
+#   Para abrir janelas: ghostty +new-window (via keybind do i3)
+#   Para recarregar config: systemctl reload --user app-com.mitchellh.ghostty.service
+#   Para ver logs: journalctl -f --user -u app-com.mitchellh.ghostty.service
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# ── INSTÂNCIA / CICLO DE VIDA ──────────────────────────────────────────────
+# gtk-single-instance: redundante com o systemd service (que já passa
+# --gtk-single-instance=true), mas mantido como fallback explícito caso
+# o service seja parado manualmente e o ghostty seja chamado diretamente.
+gtk-single-instance = true
+
+# Mantém o processo vivo mesmo sem janelas abertas.
+# Com RAM limitada, usar 'true' + delay de 30 segundos é o melhor balanço:
+# janelas abrem instantaneamente enquanto você usa, mas após 5min sem uso
+# o processo libera os ~80-100MB que ocupa.
+quit-after-last-window-closed = true
+quit-after-last-window-closed-delay = 30s
+
+
+# ── FONT ──────────────────────────────────────────────────────────────────
+font-family = "FantasqueSansM Nerd Font Mono"
+font-style = "Bold"
+font-size = 16
+font-feature = +liga
+font-feature = +calt
+
+
+# ── APARÊNCIA ─────────────────────────────────────────────────────────────
+background = #0A0F1C
+foreground = #ffffff
+
+# Opacidade: 0.83 requer compositing ativo do picom para funcionar.
+# O custo de GPU é do picom (já configurado com GLX), não do Ghostty.
+background-opacity = 0.80
+background-blur = false
+
+# window-decoration = false: remove a titlebar GTK, economiza memória GTK
+# e integra melhor com i3wm (que gerencia decorações próprio).
+window-decoration = false
+
+window-padding-x = 4
+window-padding-y = 4
+
+
+# ── CURSOR ────────────────────────────────────────────────────────────────
+cursor-style = block
+# blink = false: elimina um timer de redraw periódico — pequena economia
+# de CPU em terminais idle.
+cursor-style-blink = false
+
+
+# ── SELEÇÃO ───────────────────────────────────────────────────────────────
+selection-foreground = #0a0f1c
+selection-background = #c8d3f5
+
+
+# ── PALETA XFCE ───────────────────────────────────────────────────────────
+palette = 0=#000000
+palette = 1=#ed1111
+palette = 2=#10e010
+palette = 3=#DEDE1B
+palette = 4=#2073d8
+palette = 5=#aa00aa
+palette = 6=#00FFFF
+palette = 7=#aaaaaa
+palette = 8=#555555
+palette = 9=#ff5555
+palette = 10=#1ac21a
+palette = 11=#ffff55
+palette = 12=#62a0ea
+palette = 13=#ff3aff
+palette = 14=#55ffff
+palette = 15=#ffffff
+
+
+# ── SCROLLBACK ────────────────────────────────────────────────────────────
+# 50000 linhas é o maior consumidor de RAM por instância do Ghostty.
+# Cada linha ocupa ~80-200 bytes dependendo do conteúdo.
+# Estimativa: 50000 linhas ≈ 4-10MB por janela aberta.
+# Com RAM limitada e uso de splits/tabs, considere reduzir para 10000.
+# Valor atual mantido — ajuste se RAM virar problema com muitas janelas.
+scrollback-limit = 5000
+
+
+# ── BELL ──────────────────────────────────────────────────────────────────
+# Sintaxe correta para 1.3.1: opções separadas por vírgula com prefixo no-
+bell-features = no-audio,no-system
+
+
+# ── MOUSE ─────────────────────────────────────────────────────────────────
+mouse-hide-while-typing = false
+
+
+# ── CLIPBOARD ─────────────────────────────────────────────────────────────
+copy-on-select = false
+clipboard-read = ask
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+
+
+# ── SHELL INTEGRATION ─────────────────────────────────────────────────────
+# 'detect' auto-detecta zsh/bash/fish — correto para seu setup com zsh.
+# Features: cursor (shape muda por modo), sudo (preserva integração ao
+# usar sudo -s), title (atualiza título da janela com comando atual).
+shell-integration = detect
+shell-integration-features = cursor,sudo,title
+
+
+# ── KEYBINDINGS ───────────────────────────────────────────────────────────
+
+# — Scrollback —
+keybind = shift+page_up=scroll_page_up
+keybind = shift+page_down=scroll_page_down
+
+# — Jump por prompt (requer shell-integration) —
+keybind = ctrl+shift+up=jump_to_prompt:-1
+keybind = ctrl+shift+down=jump_to_prompt:1
+
+# — Tabs —
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_surface
+keybind = ctrl+shift+right=next_tab
+keybind = ctrl+shift+left=previous_tab
+
+# — Splits nativos —
+keybind = ctrl+shift+s>h=new_split:left
+keybind = ctrl+shift+s>v=new_split:down
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+j=goto_split:bottom
+
+# — Clipboard explícito —
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+
+# — Fonte —
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+zero=reset_font_size
+
+# — Config —
+keybind = ctrl+shift+r=reload_config
+
+# — Quick terminal —
+keybind = ctrl+shift+b=toggle_quick_terminal

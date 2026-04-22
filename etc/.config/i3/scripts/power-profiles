@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# power-profiles — alterna perfis de CPU via rofi
+# Requer: power-profiles-daemon instalado e rodando
+# Keybind: bindsym $mod+Shift+i exec ~/.config/i3/scripts/power-profiles
+
+ROFI_THEME="$HOME/.config/rofi/power-profiles.rasi"
+
+# ── Perfis disponíveis ────────────────────────────────────────────────────────
+declare -A all_profiles=(
+    ["  Performance"]="performance"
+    ["   Balanced"]="balanced"
+    ["  Power Saver"]="power-saver"
+    ["   Cancel"]=""
+)
+
+# Monta menu apenas com os perfis que o sistema suporta
+declare -A menu
+for label in "${!all_profiles[@]}"; do
+    profile="${all_profiles[$label]}"
+    # Cancel entra sempre; perfis só entram se disponíveis
+    if [[ -z "$profile" ]] || powerprofilesctl list | grep -q "$profile"; then
+        menu[$label]="$profile"
+    fi
+done
+
+# ── Seleção ───────────────────────────────────────────────────────────────────
+selection=$(printf '%s\n' "${!menu[@]}" | sort | rofi -dmenu -i -p "" -theme "$ROFI_THEME")
+
+# Nada selecionado ou Cancel
+[[ -z "$selection" || -z "${menu[$selection]}" ]] && exit 0
+
+# ── Aplicar perfil ────────────────────────────────────────────────────────────
+powerprofilesctl set "${menu[$selection]}"
+
+# Notificação de confirmação
+notify-send -i power-profile-balanced -t 2000 \
+    "Power Profile" "Switched to: ${menu[$selection]}"

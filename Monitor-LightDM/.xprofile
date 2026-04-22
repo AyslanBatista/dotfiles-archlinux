@@ -1,0 +1,6 @@
+#!/bin/sh
+# Monitor layout já configurado via /etc/X11/xorg.conf.d/20-nvidia.conf
+xrandr --output DP-2 --primary
+
+xrandr --dpi 96
+xrdb -merge ~/.Xresources

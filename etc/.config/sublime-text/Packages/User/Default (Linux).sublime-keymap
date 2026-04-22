@@ -1,0 +1,44 @@
+[
+    {
+        "keys": [
+            "alt+m"
+        ],
+        "command": "markdown_preview",
+        "args": {
+            "target": "browser",
+            "parser": "markdown"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+shift+i"
+        ],
+        "command": "lsp_format_document"
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "ctrl+i"
+        ],
+        "command": "lsp_hover"
+    },
+    {
+        "keys": [
+            "ctrl+alt+space"
+        ],
+        "command": "noop",
+        "context": [
+            {
+                "key": "lsp.signature_help",
+                "operator": "equal",
+                "operand": 0
+            }
+        ]
+    },
+    {
+        "keys": [
+            "ctrl+shift+o"
+        ],
+        "command": "prompt_open_folder"
+    },
+]

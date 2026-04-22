@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Checking reboot requirement and updating Polybar...
+When = PostTransaction
+Exec = /bin/sh -c 'runuser -l ayslan -c "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus polybar-msg action updates-alert hook 0 >/dev/null 2>&1"; runuser -l ayslan -c "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus ~/.config/polybar/scripts/reboot-alert.sh"'

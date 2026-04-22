@@ -1,0 +1,65 @@
+name: Meus Agents Locais
+version: 1.0.0
+schema: v1
+
+models:
+  # ── Chat / Agent models ────────────────────────────────────────
+  - name: Exploit-Dev
+    provider: ollama
+    model: Exploit-Dev:latest
+    apiBase: http://localhost:11434
+    description: "Exploit dev, shellcode, tools, C/Rust/Python, sysadmin"
+    roles:
+      - chat
+      - edit
+      - apply
+
+  - name: Red-Team
+    provider: ollama
+    model: Red-Team:latest
+    apiBase: http://localhost:11434
+    description: "TTPs, pentest, AD attacks, C2, CTF"
+    roles:
+      - chat
+      - edit
+      - apply
+
+  - name: Reverse-Engineer
+    provider: ollama
+    model: Reverse-Engineer:latest
+    apiBase: http://localhost:11434
+    description: "Binários, malware, assembly, static/dynamic analysis"
+    roles:
+      - chat
+      - edit
+      - apply
+
+# ── Autocomplete inline (Tab) ──────────────────────────────────
+tabAutocompleteModel:
+  provider: ollama
+  model: qwen2.5-coder:3b
+  apiBase: http://localhost:11434
+  # Modelo leve e rápido — perfeito para autocomplete
+
+# ── Embeddings (para @codebase funcionar) ─────────────────────
+embeddingsProvider:
+  provider: ollama
+  model: nomic-embed-text
+  apiBase: http://localhost:11434
+
+# ── Rerank (opcional mas melhora @codebase) ────────────────────
+# reranker:
+#   provider: ollama
+#   model: bge-reranker-v2-m3
+
+# ── Contexto automático ────────────────────────────────────────
+context:
+  - provider: code
+  - provider: docs
+  - provider: terminal
+  - provider: diff
+  - provider: folder
+  - provider: codebase
+
+# ── Slash commands (agora usa "prompts" no novo formato, mas isso ainda funciona) ─────────────────────────────────────────────
+# Se quiser migrar totalmente, posso te dar a versão com "prompts" depois.

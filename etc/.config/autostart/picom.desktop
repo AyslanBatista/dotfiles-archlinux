@@ -1,0 +1,34 @@
+# ============================================================================
+# OVERRIDE LOCAL — NÃO DELETAR
+# ============================================================================
+# Este arquivo desabilita o picom.desktop do sistema em /etc/xdg/autostart/
+# que seria iniciado pelo dex --autostart no i3 config.
+#
+# Sem este override, o dex iniciaria um segundo picom (sem config) em conflito
+# com o picom já iniciado pelo i3 config (linha 327), causando:
+#   - "Another composite manager is already running"
+#   - GL_INVALID_FRAMEBUFFER_OPERATION em cascata no .xsession-errors
+#
+# O picom correto é iniciado pelo i3 com:
+#   exec --no-startup-id picom --config ~/.config/picom/picom.conf
+#
+# Referência XDG: Hidden=true instrui o dex a ignorar este entry.
+# NÃO remova Hidden=true e NÃO delete este arquivo.
+# ============================================================================
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+NoDisplay=false
+Name=picom
+GenericName=X compositor
+Comment=An X compositor
+Categories=Utility;
+Keywords=compositor;composite manager;window effects;transparency;opacity;
+TryExec=picom
+Exec=picom
+StartupNotify=false
+Terminal=false
+# Thanks to quequotion for providing this file!
+Icon=picom
+Hidden=true

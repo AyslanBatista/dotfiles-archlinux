@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# temperature — Polybar, roda uma vez (interval=30 no config.ini)
+# Thresholds via env: T_WARN=70 T_CRIT=90
+
+T_WARN=${T_WARN:-70}
+T_CRIT=${T_CRIT:-90}
+SENSOR_CHIP=${SENSOR_CHIP:-""}
+
+# 5 ícones de termômetro do mais frio ao mais quente
+# Preencha com: nf-fa-thermometer-empty/quarter/half/three-quarters/full
+# U+F2CB  U+F2CA  U+F2C9  U+F2C8  U+F2C7
+ICON_0="" # < 45°C
+ICON_1="" # < 55°C
+ICON_2="" # < 65°C
+ICON_3="" # < 75°C
+ICON_4="" # >= 75°C
+
+get_temperature() {
+    local cmd="sensors -u${SENSOR_CHIP:+ $SENSOR_CHIP}"
+    $cmd 2>/dev/null | awk '
+        /k10temp|coretemp/ { in_block=1 }
+        in_block && /temp1_input/ { printf "%.0f", $2; exit }
+        /acpitz/ { in_acpitz=1 }
+        in_acpitz && /temp1_input/ { acpitz=sprintf("%.0f", $2) }
+        END { if (acpitz != "") print acpitz }
+    '
+}
+
+temp=$(get_temperature)
+
+if [[ -z "$temp" ]]; then
+    echo "N/A"
+    exit 0
+fi
+
+if ((temp < 45)); then
+    ICON="$ICON_0"
+elif ((temp < 55)); then
+    ICON="$ICON_1"
+elif ((temp < 65)); then
+    ICON="$ICON_2"
+elif ((temp < 75)); then
+    ICON="$ICON_3"
+else
+    ICON="$ICON_4"
+fi
+
+if ((temp >= T_CRIT)); then
+    color="#f7768e"
+elif ((temp >= T_WARN)); then
+    color="#e1b700"
+else
+    color="#e0e8ff"
+fi
+
+printf "%s" "${ICON}${temp}°C" | awk -v color="$color" \
+    '{printf "%%{F%s}%s%%{F-}\n", color, $0}'

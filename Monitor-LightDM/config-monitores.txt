@@ -1,0 +1,48 @@
+https://www.eizo.be/monitor-test/
+
+AOC 27G2G4
+Ajuste de Imagem
+Contraste: 75
+Brilho: 65
+Modo ECO: Padrão
+Gamma: Gamma2
+DCR: Desligar
+HDR: Desligar
+
+Config. Cor
+Ajuste de Cor: Usuário
+DCB Modo: Desligar
+Demo: Desligar
+Vermelho: 22
+Verde: 40
+Azul: 44
+
+Conf Jogo
+Modo de Jogo: Desligar
+Cont. Sombra: 40
+Log Ent Baixa: Ligar
+Cor do jogo: 10
+Modo de LowBlue: Desligar
+Overdrive: Média
+G-SYNC: Ligar
+Cont. Quadro: Desligar
+
+LG ELECTRONICS 22BN550Y
+Brilho: 70
+Contraste: 65
+Tempo de resposta: Desligar 1/4
+Nitidez: 10
+Nível de preto: Baixo 1/2
+Over Scan: Desligar 1/2
+Gama de cor: Gama de cor1 2/3
+Temp cor: Utilizador
+Vermelho: 50
+Verde: 50
+Azul: 50
+
+Seis Cores
+.Matiz: 50
+.Saturação: 50
+
+Repo cor: Não
+

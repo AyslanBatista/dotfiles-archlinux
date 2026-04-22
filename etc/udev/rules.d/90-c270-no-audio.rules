@@ -1,0 +1,2 @@
+# Logitech C270 — desabilita audio, mantém video (uvcvideo não é afetado)
+SUBSYSTEM=="usb", DRIVER=="snd-usb-audio", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="0825", ATTR{authorized}="0"

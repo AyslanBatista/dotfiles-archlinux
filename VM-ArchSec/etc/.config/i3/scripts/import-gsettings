@@ -1,0 +1,23 @@
+#!/bin/sh
+# import-gsettings — carrega tema GTK, ícones, cursor e fonte no i3
+# Roda no autostart: exec_always $HOME/.config/i3/scripts/import-gsettings
+
+config="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-3.0/settings.ini"
+
+[ -f "$config" ] || exit 1
+
+# trim() remove espaços em branco ao redor do valor lido do .ini
+# sem isso, valores como "gtk-theme-name = Adwaita " quebram o gsettings silenciosamente
+trim() { echo "$1" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//'; }
+
+schema="org.gnome.desktop.interface"
+
+gtk_theme=$(trim "$(grep 'gtk-theme-name'       "$config" | cut -d'=' -f2)")
+icon_theme=$(trim "$(grep 'gtk-icon-theme-name'  "$config" | cut -d'=' -f2)")
+cursor_theme=$(trim "$(grep 'gtk-cursor-theme-name' "$config" | cut -d'=' -f2)")
+font_name=$(trim "$(grep 'gtk-font-name'         "$config" | cut -d'=' -f2)")
+
+[ -n "$gtk_theme"    ] && gsettings set "$schema" gtk-theme    "$gtk_theme"
+[ -n "$icon_theme"   ] && gsettings set "$schema" icon-theme   "$icon_theme"
+[ -n "$cursor_theme" ] && gsettings set "$schema" cursor-theme "$cursor_theme"
+[ -n "$font_name"    ] && gsettings set "$schema" font-name    "$font_name"

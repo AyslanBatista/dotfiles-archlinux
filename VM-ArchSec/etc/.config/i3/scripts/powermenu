@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# powermenu — menu de energia via rofi
+# Keybind: bindsym $mod+F12 exec ~/.config/i3/scripts/powermenu
+
+ROFI_THEME="$HOME/.config/rofi/powermenu.rasi"
+
+# ── Menu ──────────────────────────────────────────────────────────────────────
+# Prefixo numérico garante a ordem — associative arrays não preservam inserção
+declare -A menu=(
+    ["1    Shutdown"]="systemctl poweroff"
+    ["2    Reboot"]="systemctl reboot"
+    ["3    Suspend"]="systemctl suspend"
+    ["4    Lock"]="$HOME/.config/i3/scripts/lock-kiosk.sh"
+    ["5    Logout"]="i3-msg exit"
+    ["6    Cancel"]=""
+)
+
+# ── Seleção ───────────────────────────────────────────────────────────────────
+# sort ordena pelo prefixo numérico; sed remove o prefixo antes de exibir no rofi
+selection=$(printf '%s\n' "${!menu[@]}" | sort | sed 's/^[0-9]//' | rofi -dmenu -i -p "" -theme "$ROFI_THEME")
+
+# Recompõe a chave real para buscar no array
+full_key=$(printf '%s\n' "${!menu[@]}" | grep -F "$selection")
+
+# Nada selecionado ou Cancel
+[[ -z "$selection" || -z "${menu[$full_key]}" ]] && exit 0
+
+# ── Execução ──────────────────────────────────────────────────────────────────
+${menu[$full_key]}

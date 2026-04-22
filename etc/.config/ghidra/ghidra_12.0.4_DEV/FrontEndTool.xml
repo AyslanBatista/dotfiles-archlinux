@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FRONTEND VERSION="12.0.4">
+    <TOOL_CONFIG CONFIG_NAME="NO_LONGER_USED">
+        <ICON LOCATION="view_detailed.png" />
+        <TOOL TOOL_NAME="Ghidra: Test" INSTANCE_NAME="">
+            <OPTIONS />
+            <PACKAGE NAME="Ghidra Core" />
+            <PACKAGE NAME="Utility" />
+            <ROOT_NODE X_POS="6" Y_POS="12" WIDTH="1908" HEIGHT="1062" EX_STATE="6" FOCUSED_OWNER="FrontEnd Tool" FOCUSED_NAME="FrontEnd" FOCUSED_TITLE="Project Window">
+                <COMPONENT_NODE TOP_INFO="0">
+                    <COMPONENT_INFO NAME="FrontEnd" OWNER="FrontEnd Tool" TITLE="Project Window" ACTIVE="true" GROUP="Default" INSTANCE_ID="3725622733028073731" />
+                </COMPONENT_NODE>
+            </ROOT_NODE>
+            <PREFERENCES>
+                <PREFERENCE_STATE NAME="docking.widgets.filechooser.DirectoryTableModel:Filename:Size:Modified:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="Filename" WIDTH="226" VISIBLE="true" />
+                            <COLUMN NAME="Size" WIDTH="225" VISIBLE="true" />
+                            <COLUMN NAME="Modified" WIDTH="225" VISIBLE="true" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="docking.theme.gui.ThemeColorPaletteTable$1:Id:Current Color:Theme Color:Default Color:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$IdColumn.Id" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Current Color" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Theme Color" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Default Color" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Light Defaults" WIDTH="300" VISIBLE="false" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Dark Defaults" WIDTH="300" VISIBLE="false" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="docking.theme.gui.ThemeIconTableModel:Id:Current Icon:Theme Icon:Default Icon:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="docking.theme.gui.ThemeIconTableModel$IdColumn.Id" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeIconTableModel$IconValueColumn.Current Icon" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeIconTableModel$IconValueColumn.Theme Icon" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeIconTableModel$IconValueColumn.Default Icon" WIDTH="270" VISIBLE="true" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="ghidra.framework.plugintool.dialog.PluginInstallerTableModel:Installation Status:Status:Name:Description:Category:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="ghidra.framework.plugintool.dialog.PluginInstallerTableModel$PluginInstalledColumn.Installation Status" WIDTH="25" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.plugintool.dialog.PluginInstallerTableModel$PluginStatusColumn.Status" WIDTH="24" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.plugintool.dialog.PluginInstallerTableModel$PluginNameColumn.Name" WIDTH="284" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.plugintool.dialog.PluginInstallerTableModel$PluginDescriptionColumn.Description" WIDTH="183" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.plugintool.dialog.PluginInstallerTableModel$PluginCategoryColumn.Category" WIDTH="182" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.plugintool.dialog.PluginInstallerTableModel$PluginModuleColumn.Module" WIDTH="200" VISIBLE="false" />
+                            <COLUMN NAME="ghidra.framework.plugintool.dialog.PluginInstallerTableModel$PluginLocationColumn.Location" WIDTH="200" VISIBLE="false" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="2" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="docking.ErrLogDialog$ErrEntryTableModel:#:Message:Details:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="docking.ErrLogDialog$ErrEntryTableModel$IdColumn.#" WIDTH="242" VISIBLE="true" />
+                            <COLUMN NAME="docking.ErrLogDialog$ErrEntryTableModel$MessageColumn.Message" WIDTH="243" VISIBLE="true" />
+                            <COLUMN NAME="docking.ErrLogDialog$ErrEntryTableModel$DetailsColumn.Details" WIDTH="500" VISIBLE="false" />
+                            <COLUMN NAME="docking.ErrLogDialog$ErrEntryTableModel$TimestampColumn.Time" WIDTH="242" VISIBLE="true" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="docking.theme.gui.ThemeColorTableModel:Id:Current Color:Theme Color:Default Color:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$IdColumn.Id" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Current Color" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Theme Color" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Default Color" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Light Defaults" WIDTH="300" VISIBLE="false" />
+                            <COLUMN NAME="docking.theme.gui.ThemeColorTableModel$ValueColumn.Dark Defaults" WIDTH="300" VISIBLE="false" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="docking.theme.gui.ThemeFontTableModel:Id:Current Font:Theme Font:Default Font:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="docking.theme.gui.ThemeFontTableModel$IdColumn.Id" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeFontTableModel$FontValueColumn.Current Font" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeFontTableModel$FontValueColumn.Theme Font" WIDTH="270" VISIBLE="true" />
+                            <COLUMN NAME="docking.theme.gui.ThemeFontTableModel$FontValueColumn.Default Font" WIDTH="270" VISIBLE="true" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="ghidra.framework.plugintool.dialog.KeyBindingsPanel$KeyBindingsTableModel:Action Name:Key Binding:Owner:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="docking.widgets.table.TableColumnDescriptor$1.Action Name" WIDTH="131" VISIBLE="true" />
+                            <COLUMN NAME="docking.widgets.table.TableColumnDescriptor$1.Key Binding" WIDTH="299" VISIBLE="true" />
+                            <COLUMN NAME="docking.widgets.table.TableColumnDescriptor$1.Owner" WIDTH="299" VISIBLE="true" />
+                            <COLUMN NAME="docking.widgets.table.TableColumnDescriptor$1.Description" WIDTH="500" VISIBLE="false" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="ghidra.framework.project.extensions.ExtensionTableModel:Installation Status:Name:Description:Version:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="ghidra.framework.project.extensions.ExtensionTableModel$ExtensionInstalledColumn.Installation Status" WIDTH="25" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.project.extensions.ExtensionTableModel$ExtensionNameColumn.Name" WIDTH="174" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.project.extensions.ExtensionTableModel$ExtensionDescriptionColumn.Description" WIDTH="324" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.project.extensions.ExtensionTableModel$ExtensionVersionColumn.Version" WIDTH="175" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.project.extensions.ExtensionTableModel$ExtensionInstallationDirColumn.Installation Directory" WIDTH="100" VISIBLE="false" />
+                            <COLUMN NAME="ghidra.framework.project.extensions.ExtensionTableModel$ExtensionArchiveFileColumn.Archive File" WIDTH="100" VISIBLE="false" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="1" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+                <PREFERENCE_STATE NAME="ghidra.framework.main.datatable.ProjectDataTableModel:Type:Name:Path:Modified:Processor:Endian:Address Size:Compiler:Size:Format:">
+                    <XML NAME="COLUMN_DATA">
+                        <Table_State>
+                            <COLUMN NAME="ghidra.framework.main.datatable.ProjectDataTableModel$DomainFileTypeColumn.Type" WIDTH="174" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.main.datatable.ProjectDataTableModel$DomainFileNameColumn.Name" WIDTH="200" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.main.datatable.ProjectDataTableModel$DomainFilePathColumn.Path" WIDTH="200" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.framework.main.datatable.ProjectDataTableModel$ModificationDateColumn.Modified" WIDTH="200" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.ProcessorProjectDataColumn.Processor" WIDTH="186" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.EndianProjectDataColumn.Endian" WIDTH="186" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.AddressSizeProjectDataColumn.Address Size" WIDTH="180" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.CompilerProjectDataColumn.Compiler" WIDTH="185" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.DomainFileSizeProjectDataColumn.Size" WIDTH="189" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.FormatProjectDataColumn.Format" WIDTH="188" VISIBLE="true" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.CreationDateProjectDataColumn.Created" WIDTH="200" VISIBLE="false" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.ExecutablePathProjectDataColumn.Executable Path" WIDTH="60" VISIBLE="false" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.LanguageProjectDataColumn.Language ID" WIDTH="60" VISIBLE="false" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.CreatedWithProjectDataColumn.Created With" WIDTH="100" VISIBLE="false" />
+                            <COLUMN NAME="ghidra.util.table.projectdata.column.Md5ProjectDataColumn.MD5" WIDTH="120" VISIBLE="false" />
+                            <TABLE_SORT_STATE>
+                                <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                            </TABLE_SORT_STATE>
+                        </Table_State>
+                    </XML>
+                </PREFERENCE_STATE>
+            </PREFERENCES>
+        </TOOL>
+    </TOOL_CONFIG>
+</FRONTEND>
+

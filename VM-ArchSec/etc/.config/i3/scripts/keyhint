@@ -1,0 +1,204 @@
+#!/usr/bin/env bash
+# keyhint-2 — menu de atalhos do i3wm
+# Parseia ~/.config/i3/config automaticamente via regex
+# Usa o mesmo tema do $mod+d (rofi padrão)
+# Basta editar o i3 config — este script se atualiza sozinho
+
+I3_CONFIG="$HOME/.config/i3/config"
+
+# ── Resolve variáveis do config ($mod, $ws1..$ws10, etc.) ────────────────────
+declare -A i3vars
+while IFS= read -r setline; do
+    var=$(echo "$setline" | awk '{print $2}')
+    val=$(echo "$setline" | awk '{$1=$2=""; sub(/^[[:space:]]+/,"",$0); print $0}')
+    i3vars["$var"]="$val"
+done < <(grep '^set ' "$I3_CONFIG")
+
+resolve_vars() {
+    local str="$1"
+    for var in "${!i3vars[@]}"; do
+        str="${str//$var/${i3vars[$var]}}"
+    done
+    echo "$str"
+}
+
+# ── Limpa o comando para exibição ─────────────────────────────────────────────
+clean_cmd() {
+    local cmd="$1"
+    # Remove prefixos de execução
+    cmd="${cmd#exec --no-startup-id }"
+    cmd="${cmd#exec }"
+    cmd="${cmd#--no-startup-id }"
+    # Remove argumentos após o binário (mantém só o nome do script/programa)
+    cmd=$(echo "$cmd" | awk '{print $1}')
+    # Pega só o nome base do caminho
+    cmd=$(basename "$cmd")
+    # Remove extensão .sh
+    cmd="${cmd%.sh}"
+    echo "$cmd"
+}
+
+# ── Humaniza teclas ───────────────────────────────────────────────────────────
+humanize_key() {
+    local key="$1"
+    key="${key//Mod4/Super}"
+    key="${key//Mod1/Alt}"
+    key="${key//XF86AudioRaiseVolume/󰝝 Vol+}"
+    key="${key//XF86AudioLowerVolume/󰝞 Vol-}"
+    key="${key//XF86AudioMute/󰝟 Mute}"
+    key="${key//XF86AudioMicMute/󰍭 MicMute}"
+    key="${key//XF86AudioPlay/󰐊 Play}"
+    key="${key//XF86AudioNext/󰒭 Next}"
+    key="${key//XF86AudioPrev/󰒮 Prev}"
+    key="${key//XF86MonBrightnessUp/󰃟 Bright+}"
+    key="${key//XF86MonBrightnessDown/󰃞 Bright-}"
+    key="${key//Return/Enter}"
+    key="${key//+shift+/+Shift+}"
+    echo "$key"
+}
+
+# ── Descrição amigável do comando ─────────────────────────────────────────────
+friendly_desc() {
+    local cmd="$1" key="$2"
+    case "$cmd" in
+        # i3 nativo
+        "focus left")           echo "Focus Left" ;;
+        "focus right")          echo "Focus Right" ;;
+        "focus up")             echo "Focus Up" ;;
+        "focus down")           echo "Focus Down" ;;
+        "move left")            echo "Move Window Left" ;;
+        "move right")           echo "Move Window Right" ;;
+        "move up")              echo "Move Window Up" ;;
+        "move down")            echo "Move Window Down" ;;
+        "split h")              echo "Split Horizontal" ;;
+        "split v")              echo "Split Vertical" ;;
+        "fullscreen toggle")    echo "Fullscreen Toggle" ;;
+        "floating toggle")      echo "Toggle Floating" ;;
+        "focus mode_toggle")    echo "Focus Mode Toggle" ;;
+        "focus parent")         echo "Focus Parent" ;;
+        "layout stacking")      echo "Layout: Stacking" ;;
+        "layout toggle split")  echo "Layout: Toggle Split" ;;
+        "kill")                 echo "Close Window" ;;
+        "reload")               echo "Reload i3 Config" ;;
+        "restart")              echo "Restart i3" ;;
+        "workspace next")       echo "Next Workspace" ;;
+        "workspace prev")       echo "Previous Workspace" ;;
+        resize*)                echo "Resize Window" ;;
+        # Rofi — detecta pelo argumento -show para diferenciar os menus
+        *rofi*"-show drun"*)   echo "Rofi: App Launcher" ;;
+        *rofi*"-show window"*) echo "Rofi: Window Switcher" ;;
+        *rofi*"-show emoji"*)  echo "Rofi: Emoji Picker" ;;
+        *rofi*"-show run"*)    echo "Rofi: Run Command" ;;
+        *rofi*"-modi drun"*)   echo "Rofi: App Launcher" ;;
+        *rofi*)                echo "Rofi: Menu" ;;
+        # Scripts/apps — usa nome do binário limpo
+        *)                     clean_cmd "$cmd" ;;
+    esac
+}
+
+# ── Categoriza ────────────────────────────────────────────────────────────────
+categorize() {
+    local key="$1" cmd="$2"
+    # Media keys pelo nome da tecla
+    [[ "$key" =~ Vol|Mute|Play|Next|Prev|Bright ]] && echo "MEDIA" && return
+    # Pelo comando
+    case "$cmd" in
+        focus*|move\ left|move\ right|move\ up|move\ down) echo "FOCUS" ;;
+        workspace*|move\ container*|*empty_workspace*)      echo "WORKSPACES" ;;
+        split*|fullscreen*|layout*|floating*|resize*|\
+        focus\ mode*|focus\ parent*)                       echo "LAYOUT" ;;
+        kill|reload|restart|\
+        *lock*|*powermenu*|*power-profile*|\
+        *rofi*|*keyhint*|*import-gsettings*|\
+        *pactl*|*playerctl*|*audio*|*volume*)              echo "SYSTEM" ;;
+        *)                                                  echo "APPS" ;;
+    esac
+}
+
+# ── Estruturas de dados ───────────────────────────────────────────────────────
+declare -A cat_entries
+declare -A cat_icons=(
+    [APPS]="󰀻  APPS"
+    [FOCUS]="  FOCUS & MOVEMENT"
+    [LAYOUT]="  LAYOUT"
+    [WORKSPACES]="  WORKSPACES"
+    [MEDIA]="󰝚  MEDIA"
+    [SYSTEM]="  SYSTEM"
+)
+cat_order=(APPS FOCUS LAYOUT WORKSPACES MEDIA SYSTEM)
+
+# Flags para colapsar grupos repetitivos
+ws_switch_done=false
+ws_move_done=false
+arrow_focus_done=false
+arrow_move_done=false
+
+# ── Parse do config ───────────────────────────────────────────────────────────
+while IFS= read -r rawline; do
+    line="${rawline#bindsym }"
+    key=$(echo "$line" | awk '{print $1}')
+    cmd=$(echo "$line" | cut -d' ' -f2-)
+
+    # Resolve $mod, $ws*
+    key=$(resolve_vars "$key")
+    cmd_resolved=$(resolve_vars "$cmd")
+
+    # Colapsa workspace switch (Super+1..0)
+    if [[ "$cmd" =~ workspace\ \$ws[0-9]+ ]]; then
+        $ws_switch_done && continue
+        ws_switch_done=true
+        cat_entries[WORKSPACES]+="$(printf '%-46s│  Super+[1-0]' 'Switch to Workspace')\n"
+        continue
+    fi
+
+    # Colapsa move container to workspace (Super+Shift+1..0)
+    if [[ "$cmd" =~ move\ container\ to\ workspace\ \$ws ]]; then
+        $ws_move_done && continue
+        ws_move_done=true
+        cat_entries[WORKSPACES]+="$(printf '%-46s│  Super+Shift+[1-0]' 'Move Window to Workspace')\n"
+        continue
+    fi
+
+    # Colapsa arrow keys de focus (duplicam j/k/b/o)
+    if [[ "$cmd" =~ ^focus\ (left|right|up|down)$ ]] && \
+       [[ "$key" =~ (Left|Right|Up|Down)$ ]]; then
+        $arrow_focus_done && continue
+        arrow_focus_done=true
+        cat_entries[FOCUS]+="$(printf '%-46s│  Super+[←↓↑→]' 'Focus (arrows)')\n"
+        continue
+    fi
+
+    # Colapsa arrow keys de move (duplicam Shift+j/k/b/o)
+    if [[ "$cmd" =~ ^move\ (left|right|up|down)$ ]] && \
+       [[ "$key" =~ Shift\+(Left|Right|Up|Down)$ ]]; then
+        $arrow_move_done && continue
+        arrow_move_done=true
+        cat_entries[FOCUS]+="$(printf '%-46s│  Super+Shift+[←↓↑→]' 'Move Window (arrows)')\n"
+        continue
+    fi
+
+    key_display=$(humanize_key "$key")
+    desc=$(friendly_desc "$cmd_resolved" "$cmd_resolved")
+    cat=$(categorize "$key_display" "$cmd_resolved")
+
+    cat_entries[$cat]+="$(printf '%-46s│  %s' "$desc" "$key_display")\n"
+
+done < <(grep '^bindsym' "$I3_CONFIG")
+
+# ── Monta saída com headers ───────────────────────────────────────────────────
+output=""
+for cat in "${cat_order[@]}"; do
+    [[ -z "${cat_entries[$cat]}" ]] && continue
+    header="━━━  ${cat_icons[$cat]}"
+    output+="$(printf '%-83s' "$header")\n"
+    output+="${cat_entries[$cat]}"
+done
+
+# ── Exibe no rofi ─────────────────────────────────────────────────────────────
+echo -e "$output" | grep -v '^$' | rofi \
+    -dmenu \
+    -i \
+    -no-custom \
+    -p "  Atalhos i3wm" \
+    -theme-str 'listview { lines: 22; }' \
+    > /dev/null 2>&1

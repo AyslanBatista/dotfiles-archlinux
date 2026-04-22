@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# cpu_usage — Polybar, loop infinito (tail=true, interval=0)
+# Thresholds via env: T_WARN=50 T_CRIT=80
+
+T_WARN=${T_WARN:-50}
+T_CRIT=${T_CRIT:-80}
+
+ICON=" "
+
+read_cpu() {
+    awk '/^cpu / {print $2+$3+$4+$5+$6+$7+$8, $5+$6}' /proc/stat
+}
+
+while true; do
+    read -r total1 idle1 <<<"$(read_cpu)"
+    sleep 1
+    read -r total2 idle2 <<<"$(read_cpu)"
+
+    delta_total=$((total2 - total1))
+    delta_idle=$((idle2 - idle1))
+    usage=$((delta_total > 0 ? 100 * (delta_total - delta_idle) / delta_total : 0))
+
+    if ((usage >= T_CRIT)); then
+        color="#f7768e"
+    elif ((usage >= T_WARN)); then
+        color="#e1b700"
+    else
+        color="#e0e8ff"
+    fi
+
+    printf "%s%02d%%" "${ICON}" "${usage}" | awk -v color="$color" \
+        '{printf "%%{F%s}%s%%{F-}\n", color, $0}'
+done

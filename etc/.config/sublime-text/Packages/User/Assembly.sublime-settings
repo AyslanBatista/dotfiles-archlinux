@@ -1,0 +1,7 @@
+{
+    "rulers": [40, 80],
+    "tab_size": 4,
+    "word_wrap": false,
+    "indent_to_bracket": false,
+    "translate_tabs_to_spaces": false
+}

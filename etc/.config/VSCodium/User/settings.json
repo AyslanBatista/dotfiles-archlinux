@@ -1,0 +1,234 @@
+{
+    // ============================================
+    // APARÊNCIA E TEMA
+    // ============================================
+    "workbench.colorTheme": "GrayJack's Tokyo Night",
+    "workbench.colorCustomizations": {
+        "[GrayJack's Tokyo Night]": {
+            "statusBar.background": "#373e5d",
+            "statusBar.foreground": "#7dcfff",
+            "tab.activeBorderTop": "#00FFFF"
+        }
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.location": "top",
+    "workbench.tree.enableStickyScroll": true,
+    // ============================================
+    // WINDOW / CHROME
+    // ============================================
+    "window.menuBarVisibility": "toggle",
+    "window.customTitleBarVisibility": "auto",
+    // ============================================
+    // FONTE E CURSOR
+    // ============================================
+    "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
+    "editor.fontSize": 15.5,
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 1.5,
+    "editor.codeLensFontSize": 12,
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 3,
+    "editor.cursorBlinking": "solid",
+    // ============================================
+    // TERMINAL
+    // ============================================
+    "terminal.integrated.fontFamily": "'Fira Code', monospace",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.cursorStyle": "block",
+    // ============================================
+    // RULERS
+    // ============================================
+    "editor.rulers": [
+        80,
+        100,
+        120
+    ],
+    // ============================================
+    // COMPORTAMENTO DE ARQUIVOS
+    // ============================================
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/*.pyo": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+        "**/.venv": true,
+        "**/venv": true,
+        "**/env": true,
+        "**/.env": true,
+        "**/node_modules": true,
+    },
+    // ============================================
+    // EDITOR - COMPORTAMENTO
+    // ============================================
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    "editor.autoIndent": "advanced",
+    "editor.wordWrap": "off",
+    "editor.linkedEditing": true,
+    "html.autoClosingTags": true,
+    "editor.renderLineHighlight": "all",
+    "editor.lineNumbers": "on",
+    "editor.scrollBeyondLastLine": true,
+    "editor.smoothScrolling": true,
+    "editor.minimap.enabled": true,
+    "editor.minimap.showSlider": "always",
+    "editor.parameterHints.enabled": false,
+    // ============================================
+    // HIGHLIGHTING
+    // ============================================
+    "editor.semanticHighlighting.enabled": "configuredByTheme",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.indentation": true,
+    "editor.guides.highlightActiveIndentation": true,
+    // ============================================
+    // INLAY HINTS
+    // ============================================
+    "editor.inlayHints.enabled": "on",
+    // ============================================
+    // AUTOCOMPLETION
+    // ============================================
+    "editor.suggestSelection": "first",
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.quickSuggestionsDelay": 50,
+    // ============================================
+    // FORMATTERS POR LINGUAGEM
+    // ============================================
+    "editor.formatOnSave": false,
+    // ============================================
+    // PERFORMANCE E WATCHER
+    // ============================================
+    "search.followSymlinks": false,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true,
+        "**/target/**": true,
+        "**/.venv/**": true
+    },
+    // ============================================
+    // PRIVACIDADE E SEGURANÇA
+    // ============================================
+    "telemetry.telemetryLevel": "off",
+    "redhat.telemetry.enabled": false,
+    "update.mode": "none",
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "extensions.ignoreRecommendations": true,
+    "security.workspace.trust.enabled": true,
+    // ============================================
+    // GIT
+    // ============================================
+    "git.autofetch": false,
+    "git.confirmSync": false,
+    "git.decorations.enabled": true,
+    "git.openRepositoryInParentFolders": "never",
+    // ============================================
+    // EXPLORER
+    // ============================================
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // ============================================
+    // RUST (rust-analyzer)
+    // ============================================
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.inlayHints.chainingHints.enable": true,
+    "rust-analyzer.inlayHints.typeHints.enable": true,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.semanticHighlighting.punctuation.enable": true,
+    // ============================================
+    // C/C++ (clangd)
+    // ============================================
+    "clangd.arguments": [
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=detailed",
+        "--header-insertion=never"
+    ],
+    // ============================================
+    // PYTHON
+    // ============================================
+    "python.terminal.activateEnvironment": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "ruff.lint.enable": true,
+    "ruff.organizeImports": true,
+    // ============================================
+    // MARKDOWN
+    // ============================================
+    "markdown-preview-enhanced.codeBlockTheme": "twilight.css",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "markdown-preview-enhanced.enableScriptExecution": false, // SEGURANÇA
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    // ============================================
+    // TODO TREE
+    // ============================================
+    "todo-tree.highlights.customHighlight": {
+        "BUG": {
+            "foreground": "#ffffff",
+            "background": "#ff3b30",
+            "fontWeight": "bold"
+        },
+        "HACK": {
+            "foreground": "#ffffff",
+            "background": "#ff9500",
+            "fontWeight": "bold"
+        },
+        "FIXME": {
+            "foreground": "#000000",
+            "background": "#ffcc00",
+            "fontWeight": "bold"
+        },
+        "TODO": {
+            "foreground": "#ffffff",
+            "background": "#007aff",
+            "fontWeight": "bold"
+        },
+        "XXX": {
+            "foreground": "#ffffff",
+            "background": "#af52de"
+        },
+        "breakpoint()": {
+            "foreground": "#ffffff",
+            "background": "#ff2d55",
+            "fontWeight": "bold"
+        },
+        "SAFETY": {
+            "foreground": "#ffffff",
+            "background": "#30d158",
+            "fontWeight": "bold"
+        },
+        "UNSAFE": {
+            "foreground": "#ffffff",
+            "background": "#ff2d55",
+            "fontWeight": "bold"
+        }
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "breakpoint()",
+        "SAFETY",
+        "UNSAFE"
+    ],
+    "zig.zls.enabled": "off",
+    "yaml.schemas": {
+        "file:///home/ayslan/.vscode-oss/extensions/continue.continue-1.2.22-linux-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    },
+}

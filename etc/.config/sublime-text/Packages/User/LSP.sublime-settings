@@ -1,0 +1,27 @@
+{
+    // Desabilita autocomplete nativo do ST onde LSP está ativo
+    // O LSP fornece completions muito superiores
+    "inhibit_word_completions": true,
+
+    // Formatação on save desabilitada globalmente — configurada por servidor abaixo
+    // (cada LSP tem seu formatter: rustfmt, clang-format, black/ruff)
+    "lsp_format_on_save": false,
+
+    // Diagnósticos na status bar (útil para ver erros sem abrir panel)
+    "show_diagnostics_in_view_status": true,
+    "show_diagnostics_count_in_view_status": false,
+
+    // Code actions no hover popup (útil para quick-fixes)
+    "show_code_actions_in_hover": true,
+
+    // NOVO: mostra inlay hints (tipos inferidos, nomes de parâmetros)
+    // Extremamente útil em Rust e C++ para entender código desconhecido (RE)
+    "show_inlay_hints": true,
+
+    // NOVO: painel de diagnósticos abre automaticamente quando há erros
+    "show_diagnostics_panel_on_save": 2,  // 0=nunca, 1=sempre, 2=só se houver erros
+
+    // NOVO: limita severity dos diagnósticos inline (evita poluição visual)
+    // 1=error, 2=warning, 3=info, 4=hint
+    "show_diagnostics_severity_level": 2
+}
