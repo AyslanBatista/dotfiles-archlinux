@@ -87,7 +87,7 @@ palette = 15=#ffffff
 # Estimativa: 50000 linhas ≈ 4-10MB por janela aberta.
 # Com RAM limitada e uso de splits/tabs, considere reduzir para 10000.
 # Valor atual mantido — ajuste se RAM virar problema com muitas janelas.
-scrollback-limit = 5000
+scrollback-limit = 100000
 
 
 # ── BELL ──────────────────────────────────────────────────────────────────
