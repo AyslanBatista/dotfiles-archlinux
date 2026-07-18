@@ -1,0 +1,14 @@
+[Unit]
+Description=Redimensiona a tela X e atualiza o wallpaper em eventos RandR (SPICE/i3)
+PartOf=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/x-resize
+Restart=always
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

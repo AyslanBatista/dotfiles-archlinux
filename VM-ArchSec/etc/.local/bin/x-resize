@@ -1,0 +1,39 @@
+#!/bin/bash
+set -u
+
+WALLPAPER="$HOME/Pictures/wallpaper/dasdadasdasdasd.jpg"
+
+resize_and_refresh() {
+    local output
+    output=$(xrandr | awk '/ connected/{print $1; exit}')
+    if [[ -z "$output" ]]; then
+        echo "nenhum output conectado encontrado"
+        return
+    fi
+
+    echo "resize, output=$output"
+    xrandr --output "$output" --auto
+
+    if [[ -f "$WALLPAPER" ]]; then
+        feh --bg-fill "$WALLPAPER"
+    else
+        echo "wallpaper não encontrado: $WALLPAPER"
+    fi
+}
+
+# Aplica uma vez logo ao iniciar, cobrindo o caso de a tela já
+# estar num tamanho diferente do padrão quando o serviço sobe.
+resize_and_refresh
+
+# Escuta eventos RandR da root window e reage em tempo real.
+# Debounce: ignora eventos repetidos que chegam em rajada.
+last_run=0
+xev -root -event randr | grep --line-buffered -E 'RRScreenChangeNotify|XRROutputChangeNotifyEvent' | \
+while read -r _; do
+    now=$(date +%s%N)
+    if (( (now - last_run) < 500000000 )); then
+        continue
+    fi
+    last_run=$now
+    resize_and_refresh
+done
