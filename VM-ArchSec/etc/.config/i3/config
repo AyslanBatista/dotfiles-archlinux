@@ -266,7 +266,6 @@ exec --no-startup-id xset -dpms
 
 # [5] Wallpaper + resize hook
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/dasdadasdasdasd.jpg
-exec --no-startup-id spice-vdagent
 
 # [6] Polybar — exec_always para recarregar no $mod+Shift+r
 exec_always --no-startup-id ~/.config/polybar/launch.sh
