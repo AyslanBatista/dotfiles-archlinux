@@ -29,13 +29,10 @@ get_volume_icon() {
     vol=$(get_volume)
     mute=$(is_muted)
     if [[ "$mute" == "yes" || "$vol" -eq 0 ]]; then
-        nerd_icon="  "
         theme_icon="audio-volume-muted"
     elif [[ "$vol" -lt 50 ]]; then
-        nerd_icon="  "
         theme_icon="audio-volume-low"
     else
-        nerd_icon="  "
         theme_icon="audio-volume-high"
     fi
 }
@@ -44,14 +41,12 @@ show_volume_notif() {
     local vol
     vol=$(get_volume)
     get_volume_icon
-    # nerd_icon → corpo do texto (direita)
-    # theme_icon → ícone lateral do dunst (esquerda), via -i
     notify-send \
         -i "$theme_icon" \
         -t "$notification_timeout" \
         -h "string:x-dunst-stack-tag:$notification_tag" \
         -h "int:value:$vol" \
-        "Volume" "$nerd_icon  $vol%"
+        "Volume" "$vol%"
 }
 
 # ── Main ──────────────────────────────────────────────────────────────────────

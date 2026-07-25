@@ -110,9 +110,8 @@ alias update-mirrors='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.
   && sudo reflector \
   --country Brazil,US \
   --protocol https \
-  --age 12 \
+  --age 24 \
   --latest 20 \
-  --fastest 10 \
   --sort rate \
   --connection-timeout 5 \
   --download-timeout 5 \

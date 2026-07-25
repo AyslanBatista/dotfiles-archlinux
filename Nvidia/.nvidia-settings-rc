@@ -1,6 +1,8 @@
 #
-# ~/.nvidia-settings-rc
-# Última atualização: Março 2026
+# /home/ayslan/.nvidia-settings-rc
+#
+# Configuration file for nvidia-settings - the NVIDIA Settings utility
+# Generated on Sun Apr 12 07:07:02 2026
 #
 
 # ConfigProperties:
@@ -10,9 +12,9 @@ DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 UpdateRulesOnProfileNameChange = Yes
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Memory_Used_(GPU_0),Yes,3000
 
 # Attributes:
 
@@ -26,17 +28,11 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 0/LogAnisoAppControlled=1
 0/OpenGLImageSettings=1
 0/FSAAAppEnhanced=0
-
-# AllowGSYNC e AllowVRR desabilitados: com ForceCompositionPipeline=On e
-# ambos os monitores em 60Hz fixo, VRR está bloqueado pelo pipeline de
-# compositing. Com estas opções ativas, o driver tentava negociar VRR a
-# cada frame e falhava silenciosamente, gerando overhead desnecessário.
 0/AllowGSYNC=0
 0/AllowVRR=0
 0/ShowGSYNCVisualIndicator=0
 0/ShowVRRVisualIndicator=0
 0/ShowGraphicsVisualIndicator=0
-
 [DPY:DP-0]/Dithering=0
 [DPY:DP-0]/DitheringMode=0
 [DPY:DP-0]/DitheringDepth=0
@@ -99,8 +95,4 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 [DPY:DP-5]/ColorSpace=0
 [DPY:DP-5]/ColorRange=0
 [DPY:DP-5]/SynchronousPaletteUpdates=0
-
-# GPUPowerMizerMode=1 (Prefer Maximum Performance): modo Adaptive (0) reduz
-# clock da GPU em idle, causando micro-stuttering com picom fazendo chamadas
-# GLX constantes. Modo 1 mantém clock estável eliminando latência de transição.
 [GPU:0]/GPUPowerMizerMode=1

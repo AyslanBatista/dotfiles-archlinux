@@ -303,7 +303,7 @@ force_display_urgency_hint 500 ms
 # =============
 
 # [0] systemd — propaga sessão X11 e ativa graphical-session.target
-exec --no-startup-id systemctl --user import-environment DISPLAY XAUTHORITY DBUS_SESSION_BUS_ADDRESS && systemctl --user start graphical-session.target
+exec --no-startup-id systemctl --user import-environment DISPLAY XAUTHORITY DBUS_SESSION_BUS_ADDRESS
 
 # [1] NVIDIA — carrega configurações salvas (PowerMizer, ForceCompositionPipeline etc)
 exec --no-startup-id nvidia-settings --load-config-only

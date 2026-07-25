@@ -38,8 +38,8 @@ Hotkey_6_mask=1
 NumHotkeys=7
 
 [pipewire]
-volume_left=70
-volume_right=70
+volume_left=75
+volume_right=75
 
 [qtui]
 player_height=1036
