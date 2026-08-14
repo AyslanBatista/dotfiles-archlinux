@@ -109,12 +109,12 @@ alias update-mirrors='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.
   && sudo reflector \
   --country Brazil,US \
   --protocol https \
-  --age 12 \
+  --age 24 \
   --latest 20 \
-  --fastest 10 \
   --sort rate \
   --connection-timeout 5 \
   --download-timeout 5 \
+  --threads 5 \
   --save /etc/pacman.d/mirrorlist \
   && sudo pacman -Syy'
 
@@ -124,6 +124,7 @@ alias picomconfig='nvim ~/.config/picom/picom.conf'
 alias polybarconfig='nvim ~/.config/polybar/config.ini'
 alias zshrc='nvim ~/.zshrc'
 alias code='codium'
+alias gdb='pwndbg'
 
 # ─── ALIASES: I3WM ───────────────────────────────────────────
 alias i3reload='i3-msg reload'

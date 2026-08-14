@@ -7,6 +7,7 @@ ROFI_THEME="$HOME/.config/rofi/powermenu.rasi"
 # ── Menu ──────────────────────────────────────────────────────────────────────
 # Prefixo numérico garante a ordem — associative arrays não preservam inserção
 declare -A menu=(
+    ["0 VM          "]=""
     ["1    Shutdown"]="systemctl poweroff"
     ["2    Reboot"]="systemctl reboot"
     ["3    Suspend"]="systemctl suspend"
