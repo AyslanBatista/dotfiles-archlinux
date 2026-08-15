@@ -131,7 +131,7 @@ bindsym $mod+Return       exec --no-startup-id xfce4-terminal
 bindsym $mod+Shift+Return exec --no-startup-id xfce4-terminal
 
 # Aplicações disponíveis na VM
-bindsym $mod+e exec --no-startup-id /usr/bin/codium
+bindsym $mod+e exec --no-startup-id /usr/bin/code
 bindsym $mod+w exec --no-startup-id /usr/bin/brave
 bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 

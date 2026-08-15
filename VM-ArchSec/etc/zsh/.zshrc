@@ -123,7 +123,6 @@ alias i3config='nvim ~/.config/i3/config'
 alias picomconfig='nvim ~/.config/picom/picom.conf'
 alias polybarconfig='nvim ~/.config/polybar/config.ini'
 alias zshrc='nvim ~/.zshrc'
-alias code='codium'
 alias gdb='pwndbg'
 
 # ─── ALIASES: I3WM ───────────────────────────────────────────
